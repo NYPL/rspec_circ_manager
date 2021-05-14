@@ -2,9 +2,7 @@ name: 'Master Branch Regression Test'
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ master, jsmith_patch ]
   schedule:
     - cron:  '0 0 * * *'
 
