@@ -52,5 +52,8 @@ build-iPhoneSimulator/
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
+# Allure reporting will generate report files, which do not need committed
+reports
+
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
