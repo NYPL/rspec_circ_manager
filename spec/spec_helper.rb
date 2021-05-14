@@ -16,6 +16,7 @@
 
 require "dotenv/load"
 require "rspec/retry"
+require "allure-rspec"
 
 # ENV['CIRC_USERNAME'] = "consultjsmith@nypl.org"
 # ENV['CIRC_PASSWORD'] = "turtlepower"
@@ -105,13 +106,15 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  # Below configuraiton section is associated with retry logic utilizing 
+  # Below configuration section is associated with Allure reporting.
+  config.formatter = AllureRspecFormatter
+
+  # Below configuration section is associated with retry logic utilizing 
   # rspec/retry gem.
   config.default_retry_count = 3
   config.default_sleep_interval = 10
   config.verbose_retry = true
   config.display_try_failure_messages = true
-
 
 end
 
@@ -126,10 +129,21 @@ def random_name(string_length=5)
 end
 
 def launch_browser_instance(app_timeout=180)
-  client = Selenium::WebDriver::Remote::Http::Default.new
-  client.open_timeout = app_timeout
-  client.read_timeout = app_timeout
+  if ENV['app_type'] == 'headless'
+    opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless'])
+    client = Selenium::WebDriver::Remote::Http::Default.new
+    client.open_timeout = app_timeout
+    client.read_timeout = app_timeout
+    browser = Watir::Browser.new :chrome, :http_client => client, :options => opts
+  elsif ENV['app_type'] == 'browser'
+    case ENV['browser_type']
+      when "chrome"
+        client = Selenium::WebDriver::Remote::Http::Default.new
+        client.open_timeout = app_timeout
+        client.read_timeout = app_timeout
+        browser = Watir::Browser.new :chrome, :http_client => client
+    end
+  end
 
-  browser = Watir::Browser.new :chrome, :http_client => client
-  browser
+    browser
 end
