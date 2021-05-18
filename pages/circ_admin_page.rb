@@ -197,3 +197,82 @@ class CircAdminAdminsForm < CircAdminPage
         @admin_loading_message
     end
 end
+
+class CircAdminCollectionsForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+        
+        @collections_loading_message        = @browser.element(xpath: '//h1[@id="loading"]')
+        
+        # Collection Form Buttons
+        @create_collection_button           = @browser.element(xpath: '//a[contains(@href,"/admin/web/config/collections/create")]')
+        @collections_submit_button          = @browser.element(xpath: '(//button[@type="submit"])[5]')
+
+        # Admins Form Fields
+        @collections_name_text_field        = @browser.text_field(xpath: '(//input[@name="name"])[2]')
+        @collections_protocol_select_list   = @browser.select_list(xpath: '//select[@name="protocol"]')
+
+        @collections_library_id_text_field  = @browser.text_field(xpath: '//input[@name="external_account_id"]')
+        @collections_website_id_text_field  = @browser.text_field(xpath: '//input[@name="website_id"]')
+        @collections_client_key_text_field  = @browser.text_field(xpath: '//input[@name="username"]')
+        @collections_client_secret_text_field  = @browser.text_field(xpath: '(//input[@name="password"])[2]')
+    end
+
+    # PAGE ACTIONS
+    def fill_form_with_overdrive_test_values (name)
+        @create_collection_button.wait_until(&:present?).click
+        @collections_loading_message.wait_while(&:present?)
+        @collections_name_text_field.wait_until(&:present?).set(name)
+        @collections_protocol_select_list.wait_until(&:present?).select "Overdrive"
+        @collections_library_id_text_field.wait_until(&:present?).set("test")
+        @collections_website_id_text_field.wait_until(&:present?).set("test")
+        @collections_client_key_text_field.wait_until(&:present?).set("test")
+        @collections_client_secret_text_field.wait_until(&:present?).set("test")
+        @collections_submit_button.wait_until(&:present?).click
+        @collections_loading_message.wait_while(&:present?)
+    end
+
+    # GETTERS
+    def loading_message
+        @collections_loading_message
+    end
+end
+
+class CircAdminPatronAuthForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+        
+        @patron_auth_loading_message        = @browser.element(xpath: '//h1[@id="loading"]')
+        
+        # Collection Form Buttons
+        @create_patron_auth_button           = @browser.element(xpath: '//a[contains(@href,"/admin/web/config/patronAuth/create")]')
+        @patron_auth_submit_button          = @browser.element(xpath: '(//button[@type="submit"])[7]')
+
+        # Admins Form Fields
+        @patron_auth_name_text_field            = @browser.text_field(name: "name")
+        @patron_auth_protocol_select_list       = @browser.select_list(name: "protocol")
+        @patron_auth_url_text_field             = @browser.text_field(name: "url")
+        @patron_auth_test_identifier_text_field = @browser.text_field(name: "test_identifier")
+        @patron_auth_barcode_format_select_list = @browser.select_list(name: "identifier_barcode_format")
+        @patron_auth_keyboard_id_select_list    = @browser.select_list(name: "identifier_keyboard")
+    end
+
+    # PAGE ACTIONS
+    def fill_form_with_millenium_test_values (name)
+        @create_patron_auth_button.wait_until(&:present?).click
+        wait_for_loading_message(@patron_auth_loading_message)
+        @patron_auth_name_text_field.wait_until(&:present?).set(name)
+        @patron_auth_protocol_select_list.wait_until(&:present?).select "Millenium"
+        @patron_auth_url_text_field.wait_until(&present?).set("https://millenium.com/")
+        @patron_auth_test_identifier_text_field.wait_until(&:present?).set("test")
+        @patron_auth_barcode_format_select_list.wait_until(&:present?).select "Patron identifiers are not rendered as barcodes"
+        @patron_auth_keyboard_id_select_list.wait_until(&:present?).select "System default"
+        @patron_auth_submit_button.wait_until(&:present?).click
+        wait_for_loading_message(@patron_auth_loading_message)
+    end
+
+    # GETTERS
+    def loading_message
+        @patron_auth_loading_message
+    end
+end

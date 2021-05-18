@@ -111,7 +111,7 @@ RSpec.configure do |config|
 
   # Below configuration section is associated with retry logic utilizing 
   # rspec/retry gem.
-  config.default_retry_count = 3
+  config.default_retry_count = 1
   config.default_sleep_interval = 10
   config.verbose_retry = true
   config.display_try_failure_messages = true
@@ -119,6 +119,11 @@ RSpec.configure do |config|
   # This failure exit code is set to zero to allow successful run of GitHub Action
   # associated with this test framework.
   config.failure_exit_code = 0
+
+  # After running an example, take an Allure screenshot on failure.
+  config.after(:each) {
+
+  }
 end
 
 def random_email(email_string_length=5, domain="@gmail.com")
