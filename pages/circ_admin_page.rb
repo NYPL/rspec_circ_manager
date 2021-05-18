@@ -336,3 +336,33 @@ class CircAdminSitewideSettingsForm < CircAdminPage
         @sitewide_settings_submit_button
     end
 end
+
+class CircAdminLoggingForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+
+        @logging_loading_message      = @browser.element(xpath: '//h2[text()="Logging service configuration"]/../div[@class="loading"]/h1')
+        
+        # PAGE BUTTONS
+        @create_logging_button                  = @browser.element(xpath: "//a[contains(@href, '/admin/web/config/logging/create')]")
+        @logging_submit_button                  = @browser.element(xpath: '(//button[@type="submit"])[9]')
+        
+        # PAGE FIELDS
+        @logging_name_text_field                = @browser.text_field(xpath: '(//input[@name="name"])[5]')
+        @logging_protocol_select_list           = @browser.select_list(xpath: '(//select[@name="protocol"])[4]')
+    end
+
+    # PAGE ACTIONS
+    def fill_form_as_sysLog(name)
+        @create_logging_button.wait_until(&:present?).click
+        # wait_for_loading_message(@logging_loading_message)
+        @logging_protocol_select_list.select "sysLog"
+        @logging_name_text_field.wait_until(&:present?).set(name)
+        @logging_submit_button.wait_until(&:present?).click
+    end
+
+    # GETTERS
+    def loading_message
+        @logging_loading_message
+    end
+end
