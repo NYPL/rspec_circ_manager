@@ -20,26 +20,24 @@ RSpec.describe "005: Admin Authentication Tab" do
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         
-        # @admin_form = CircAdminAdminsForm.new(@browser)
+        @admin_auth_form = CircAdminAdminAuthForm.new(@browser)
     end
 
     after(:each) do
-        # @admin_page.delete_by_value(browser_instance, tab, entry_value, loading_message)
         @browser.close
     end
 
-    xit "Returns success message with valid form fill" do
-        ENV['CIRC_USERNAME'] = "consultjsmith@nypl.org"
-        ENV['CIRC_PASSWORD'] = "turtlepower"
-
+    it "Exists after clicking tab" do
         @login_page.goto_url
         @login_page.login_as(ENV['CIRC_USERNAME'], ENV['CIRC_PASSWORD'])
         @admin_page.goto_url
         
-        # goto tab
-        
-        # fill form
+        @admin_page.admin_auth_tab.wait_until(&:present?).click
 
-        expect(@admin_page.success_message.present?).to eql true
+        expect(@admin_auth_form.admin_auth_page_header.present?).to be true
+    end
+
+    xit "Returns success message with valid form fill (MANUAL)" do
+        # Due to inability to create new admin auth, this is a manually tested
     end
 end

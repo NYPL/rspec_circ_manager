@@ -276,3 +276,63 @@ class CircAdminPatronAuthForm < CircAdminPage
         @patron_auth_loading_message
     end
 end
+
+class CircAdminAdminAuthForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+        
+        @admin_auth_page_header     = @browser.element(xpath: "//div[@id='opds-catalog']/div/main/div/div/div[4]/div/h2")
+        
+        @expected_header_text       = "Admin authentication service configuration"
+    end
+
+    # PAGE ACTIONS
+    def verify_page
+        expect(@admin_auth_page_header.present?).to eql true
+    end
+
+    # GETTERS
+    def admin_auth_page_header
+        @admin_auth_page_header
+    end
+
+    def expected_header_text
+        @expected_header_text
+    end
+end
+
+class CircAdminSitewideSettingsForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+
+        @sitewide_settings_loading_message      = @browser.element(xpath: '//h2[text()="Sitewide setting configuration"]/../div[@class="loading"]/h1')
+        
+        # PAGE BUTTONS
+        @create_sitewide_settings_button        = @browser.element(xpath: "//a[contains(@href, '/admin/web/config/sitewideSettings/create')]")
+        @sitewide_settings_submit_button        = @browser.element(xpath: '(//button[@type="submit"])[8]')
+        
+        # PAGE FIELDS
+        @sitewide_settings_key_text_field       = @browser.select_list(name: "key")
+        @sitewide_settings_value_text_field     = @browser.text_field(name: "value")
+
+    end
+
+    # PAGE ACTIONS
+    def navigate_to_new_setting_form
+        @create_sitewide_settings_button.wait_until(&:present?).click
+        # wait_for_loading_message(@sitewide_settings_loading_message)
+    end
+
+    # GETTERS
+    def key_text_field
+        @sitewide_settings_key_text_field
+    end
+
+    def value_text_field
+        @sitewide_settings_value_text_field
+    end
+
+    def submit_button
+        @sitewide_settings_submit_button
+    end
+end
