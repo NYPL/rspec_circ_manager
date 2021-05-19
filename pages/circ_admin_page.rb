@@ -59,7 +59,7 @@ class CircAdminPage
 
     def delete_by_value_no_load(browser_instance, tab, entry_value)
         if @success_message.present?
-            button_xpath="//h3[text()='#{entry_value}']/following-sibling::button"
+            button_xpath="//h3[contains(text(), '#{entry_value}')]/following-sibling::button"
             deleted_entry = browser_instance.element(xpath: button_xpath)
             tab.wait_until(&:present?).click
             deleted_entry.wait_until(&:present?).click
@@ -70,7 +70,7 @@ class CircAdminPage
 
     def delete_by_value_with_load(browser_instance, tab, entry_value, loading_message)
         if @success_message.present?
-            button_xpath="//h3[text()='#{entry_value}']/following-sibling::button"
+            button_xpath="//h3[contains(text(), '#{entry_value}')]/following-sibling::button"
             deleted_entry = browser_instance.element(xpath: button_xpath)
             tab.wait_until(&:present?).click
             deleted_entry.wait_until(&:present?).click
@@ -160,14 +160,16 @@ class CircAdminLibrariesForm < CircAdminPage
     # PAGE ACTIONS
     def fill_form (name, url, patron_support_email, vendor_email)
         @library_create_button.wait_until(&:present?).click
-        wait_for_loading_message(@library_loading_message)
+        # wait_for_loading_message(@library_loading_message)
+        sleep(3)
         @library_form_name_field.wait_until(&:present?).set(name)
         @library_form_short_name_field.wait_until(&:present?).set(name)
         @library_form_url_field.wait_until(&:present?).set(url)
         @library_form_support_email_field.wait_until(&:present?).set(patron_support_email)
         @library_form_vendor_email_field.wait_until(&:present?).set(vendor_email)
         @library_form_submit_button.wait_until(&:present?).click
-        wait_for_loading_message(@library_loading_message)
+        # wait_for_loading_message(@library_loading_message)
+        sleep(5)
     end
 end
 
@@ -188,10 +190,12 @@ class CircAdminAdminsForm < CircAdminPage
     # PAGE ACTIONS
     def fill_form (email)
         @admin_create_button.wait_until(&:present?).click
-        wait_for_loading_message(@admin_loading_message)
+        # wait_for_loading_message(@admin_loading_message)
+        sleep(3)
         @admin_email_text_field.wait_until(&:present?).set(email)
         @admin_form_submit_button.wait_until(&:present?).click
-        wait_for_loading_message(@admin_loading_message)
+        # wait_for_loading_message(@admin_loading_message)
+        sleep(5)
     end
 
     # GETTERS
@@ -251,9 +255,9 @@ class CircAdminPatronAuthForm < CircAdminPage
         @patron_auth_submit_button          = @browser.element(xpath: '(//button[@type="submit"])[7]')
 
         # Admins Form Fields
-        @patron_auth_name_text_field            = @browser.text_field(name: "name")
-        @patron_auth_protocol_select_list       = @browser.select_list(name: "protocol")
-        @patron_auth_url_text_field             = @browser.text_field(name: "url")
+        @patron_auth_name_text_field            = @browser.text_field(xpath: "(//input[@name='name'])[4]")
+        @patron_auth_protocol_select_list       = @browser.select_list(xpath: "(//select[@name='protocol'])[3]")
+        @patron_auth_url_text_field             = @browser.text_field(xpath: "(//input[@name='url'])[2]")
         @patron_auth_test_identifier_text_field = @browser.text_field(name: "test_identifier")
         @patron_auth_barcode_format_select_list = @browser.select_list(name: "identifier_barcode_format")
         @patron_auth_keyboard_id_select_list    = @browser.select_list(name: "identifier_keyboard")
@@ -262,15 +266,17 @@ class CircAdminPatronAuthForm < CircAdminPage
     # PAGE ACTIONS
     def fill_form_with_millenium_test_values (name)
         @create_patron_auth_button.wait_until(&:present?).click
-        wait_for_loading_message(@patron_auth_loading_message)
+        # wait_for_loading_message(@patron_auth_loading_message)
+        sleep(3)
         @patron_auth_name_text_field.wait_until(&:present?).set(name)
         @patron_auth_protocol_select_list.wait_until(&:present?).select "Millenium"
-        @patron_auth_url_text_field.wait_until(&present?).set("https://millenium.com/")
+        @patron_auth_url_text_field.wait_until(&:present?).set("https://millenium.com/")
         @patron_auth_test_identifier_text_field.wait_until(&:present?).set("test")
         @patron_auth_barcode_format_select_list.wait_until(&:present?).select "Patron identifiers are not rendered as barcodes"
         @patron_auth_keyboard_id_select_list.wait_until(&:present?).select "System default"
         @patron_auth_submit_button.wait_until(&:present?).click
-        wait_for_loading_message(@patron_auth_loading_message)
+        # wait_for_loading_message(@patron_auth_loading_message)
+        sleep(5)
     end
 
     # GETTERS
@@ -358,9 +364,12 @@ class CircAdminLoggingForm < CircAdminPage
     def fill_form_as_sysLog(name)
         @create_logging_button.wait_until(&:present?).click
         # wait_for_loading_message(@logging_loading_message)
+        sleep(3)
         @logging_protocol_select_list.select "sysLog"
         @logging_name_text_field.wait_until(&:present?).set(name)
         @logging_submit_button.wait_until(&:present?).click
+        # wait_for_loading_message(@logging_loading_message)
+        sleep(3)
     end
 
     # GETTERS
