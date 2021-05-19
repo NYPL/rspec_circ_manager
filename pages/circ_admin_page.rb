@@ -9,7 +9,7 @@ class CircAdminPage
         @browser                = browser
 
         # Messages
-        @success_message        = @browser.div(class: "alert alert-success")
+        @success_message        = @browser.div(class: ["alert", "alert-success"])
         @loading_message        = @browser.elements(xpath: '//div[@class="loading"]/h1')
         
         # Side Menu Tabs

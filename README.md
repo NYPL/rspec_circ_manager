@@ -21,6 +21,7 @@ The two main pages covered in test suite include:
 Additionally, page objects for administrative forms are present in _circ_admin_page.rb_ file.
 
 ## How to Run Automation
+### Scripts
 __NOTE: All commands mentioned here are to be run from the root project folder.__
 
 One can run the following command to run ALL automation with local Chrome browser:
@@ -40,6 +41,9 @@ The above commands are meant to run all test specs. To run one file by name, fol
 ```
 rspec spec/admin_form/007_logging_tab_spec.rb
 ```
+### Example of Successful Run (Console Output)
+After running a single spec successfully, it will look something like this:
+![image info](success_test_circ.png)
 
 ## Future Work
 To increase the quality of test framework, the following items should be worked on in the future:
