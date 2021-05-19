@@ -11,35 +11,38 @@ RSpec.describe "010: CDN Tab" do
     end
 
     before(:each) do
-        client = Selenium::WebDriver::Remote::Http::Default.new
-        client.open_timeout = 180
-        client.read_timeout = 180
-
-        @browser = Watir::Browser.new :chrome, :http_client => client
+        # Browser launch to be handled by launch_browser_instance in spec_helper in future
+        if ENV['app_type'] == 'headless'
+            opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless'])
+            client = Selenium::WebDriver::Remote::Http::Default.new
+            client.open_timeout = 180
+            client.read_timeout = 180
+            @browser = Watir::Browser.new :chrome, :http_client => client, :options => opts
+        else
+            client = Selenium::WebDriver::Remote::Http::Default.new
+            client.open_timeout = 180
+            client.read_timeout = 180
+            @browser = Watir::Browser.new :chrome, :http_client => client
+        end
 
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         
-        # @admin_form = CircAdminAdminsForm.new(@browser)
+        @cdn_form = CircAdminCDNForm.new(@browser)
     end
 
     after(:each) do
-        # @admin_page.delete_by_value(browser_instance, tab, entry_value, loading_message)
         @browser.close
     end
 
-    xit "Returns success message with valid form fill" do
-        ENV['CIRC_USERNAME'] = "consultjsmith@nypl.org"
-        ENV['CIRC_PASSWORD'] = "turtlepower"
-
+    it "Returns success message after resubmitting https://cdn/" do
         @login_page.goto_url
         @login_page.login_as(ENV['CIRC_USERNAME'], ENV['CIRC_PASSWORD'])
         @admin_page.goto_url
         
-        # goto tab
+        @admin_page.cdn_tab.wait_until(&:present?).click
         
-        # fill form
-
+        @cdn_form.resubmit_cdn_edit
         expect(@admin_page.success_message.present?).to eql true
     end
 end

@@ -119,6 +119,11 @@ RSpec.configure do |config|
   # This failure exit code is set to zero to allow successful run of GitHub Action
   # associated with this test framework.
   config.failure_exit_code = 0
+
+  # After running an example, take an Allure screenshot on failure.
+  config.after(:each) {
+
+  }
 end
 
 def random_email(email_string_length=5, domain="@gmail.com")
