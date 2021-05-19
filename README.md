@@ -24,6 +24,11 @@ Additionally, page objects for administrative forms are present in _circ_admin_p
 __NOTE: All commands mentioned here are to be run from the root project folder.__
 
 One can run the following command to run ALL automation with local Chrome browser:
+=======
+Additionally, page objects for administrative forms are present in circ_admin_page.rb folder.
+
+## How to Run Automation
+From the root project folder, one can run the following command to run ALL automation with local Chrome browser:
 ```
 rspec 
 ```
@@ -47,3 +52,4 @@ To increase the quality of test framework, the following items should be worked 
 
 ## How to Contribute
 One can contribute to this automation test suite by branching off this suite, pushing changes from branch, and creating a pull request. Pull requests should pass automatic checks before being pushed to _main_ branch. 
+
