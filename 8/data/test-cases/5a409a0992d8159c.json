@@ -1,0 +1,111 @@
+{
+  "uid" : "5a409a0992d8159c",
+  "name" : "Displays key text field in form",
+  "fullName" : "006: Sitewide Settings Tab Displays key text field in form",
+  "historyId" : "1a318f427a9427829ba124730fe6dd30",
+  "time" : {
+    "start" : 1621456663464,
+    "stop" : 1621456674579,
+    "duration" : 11115
+  },
+  "description" : "Location - spec/admin_form/006_sitewide_settings_tab_spec.rb:40",
+  "descriptionHtml" : "Location - spec/admin_form/006_sitewide_settings_tab_spec.rb:40",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "rspec"
+  }, {
+    "name" : "package",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "testClass",
+    "value" : "006_sitewide_settings_tab_spec"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "epic",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "feature",
+    "value" : "006: Sitewide Settings Tab"
+  }, {
+    "name" : "suite",
+    "value" : "006: Sitewide Settings Tab"
+  }, {
+    "name" : "thread",
+    "value" : "48560"
+  }, {
+    "name" : "host",
+    "value" : "fv-az180-869"
+  }, {
+    "name" : "language",
+    "value" : "ruby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 4,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "90794caa4a027dd1",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/90794caa4a027dd1",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1621456395760,
+          "stop" : 1621456395760,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "995364f2bfc7f161",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/995364f2bfc7f161",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1621383423678,
+          "stop" : 1621383423678,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d3c3d722039fe6d0",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/6//#testresult/d3c3d722039fe6d0",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1621296858197,
+          "stop" : 1621296858197,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "813ae621e0b9ddb3",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/5//#testresult/813ae621e0b9ddb3",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1621015674930,
+          "stop" : 1621015674930,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5a409a0992d8159c.json",
+  "parameterValues" : [ ]
+}

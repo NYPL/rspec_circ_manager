@@ -1,0 +1,217 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "spec/admin_form",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "ed0258269e6c54ea",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456428693,
+        "stop" : 1621456450259,
+        "duration" : 21566
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "97ad87504ac6f7d4",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "broken",
+      "time" : {
+        "start" : 1621456450260,
+        "stop" : 1621456614113,
+        "duration" : 163853
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "cfe382409e264221",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456614115,
+        "stop" : 1621456626634,
+        "duration" : 12519
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "d4ce353770007ce",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456626635,
+        "stop" : 1621456645282,
+        "duration" : 18647
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Exists after clicking tab",
+      "uid" : "e09c6ddeda21a858",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456645283,
+        "stop" : 1621456654314,
+        "duration" : 9031
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill (MANUAL)",
+      "uid" : "621214e5902f378a",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456654316,
+        "stop" : 1621456654316,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Displays key text field in form",
+      "uid" : "5a409a0992d8159c",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456663464,
+        "stop" : 1621456674579,
+        "duration" : 11115
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Displays value text field in form",
+      "uid" : "e122e8537a2686ee",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456674580,
+        "stop" : 1621456674612,
+        "duration" : 32
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Displays submit button in form",
+      "uid" : "4f00f3f2035429b",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456674613,
+        "stop" : 1621456674634,
+        "duration" : 21
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill (MANUAL)",
+      "uid" : "815f84f2651978ec",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456674634,
+        "stop" : 1621456674634,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "bd3cf16251348350",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456674799,
+        "stop" : 1621456747082,
+        "duration" : 72283
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "7e7841a8486e3ef0",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "failed",
+      "time" : {
+        "start" : 1621456747085,
+        "stop" : 1621456800225,
+        "duration" : 53140
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message after resubmitting Local Analytics",
+      "uid" : "5437390d98abd636",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456800226,
+        "stop" : 1621456815149,
+        "duration" : 14923
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message after resubmitting https://cdn/",
+      "uid" : "20584955de24ffb8",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456815151,
+        "stop" : 1621456829717,
+        "duration" : 14566
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success after resubmitting MinIO storage edit",
+      "uid" : "86bf55989d0c6528",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456829718,
+        "stop" : 1621456844165,
+        "duration" : 14447
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message after resubmitting MARC Export catalog",
+      "uid" : "2cd44b79495574e4",
+      "parentUid" : "ce9851a435b88f4cc0bc5d79bf32ece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1621456844167,
+        "stop" : 1621456858375,
+        "duration" : 14208
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ce9851a435b88f4cc0bc5d79bf32ece5"
+  } ],
+  "name" : "packages"
+}
