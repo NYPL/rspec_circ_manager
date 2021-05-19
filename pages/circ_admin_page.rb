@@ -58,24 +58,26 @@ class CircAdminPage
     end
 
     def delete_by_value_no_load(browser_instance, tab, entry_value)
-        button_xpath="//h3[text()='#{entry_value}']/following-sibling::button"
-        deleted_entry = browser_instance.element(xpath: button_xpath)
-        
-        tab.wait_until(&:present?).click
-        deleted_entry.wait_until(&:present?).click
-        browser_instance.alert.ok
-        deleted_entry.wait_while(&:present?)
+        if @success_message.present?
+            button_xpath="//h3[text()='#{entry_value}']/following-sibling::button"
+            deleted_entry = browser_instance.element(xpath: button_xpath)
+            tab.wait_until(&:present?).click
+            deleted_entry.wait_until(&:present?).click
+            browser_instance.alert.ok
+            deleted_entry.wait_while(&:present?)
+        end
     end
 
     def delete_by_value_with_load(browser_instance, tab, entry_value, loading_message)
-        button_xpath="//h3[text()='#{entry_value}']/following-sibling::button"
-        deleted_entry = browser_instance.element(xpath: button_xpath)
-        
-        tab.wait_until(&:present?).click
-        deleted_entry.wait_until(&:present?).click
-        browser_instance.alert.ok
-        wait_for_loading_message(loading_message)
-        deleted_entry.wait_while(&:present?)
+        if @success_message.present?
+            button_xpath="//h3[text()='#{entry_value}']/following-sibling::button"
+            deleted_entry = browser_instance.element(xpath: button_xpath)
+            tab.wait_until(&:present?).click
+            deleted_entry.wait_until(&:present?).click
+            browser_instance.alert.ok
+            wait_for_loading_message(loading_message)
+            deleted_entry.wait_while(&:present?)
+        end
     end
 
     # GETTERS
@@ -364,5 +366,36 @@ class CircAdminLoggingForm < CircAdminPage
     # GETTERS
     def loading_message
         @logging_loading_message
+    end
+end
+
+class CircAdminMetadataForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+
+        @metadata_loading_message      = @browser.element(xpath: '//h2[text()="Metadata service configuration"]/../div[@class="loading"]/h1')
+        
+        # PAGE BUTTONS
+        @create_metadata_button                 = @browser.element(xpath: "//a[contains(@href, '/admin/web/config/metadata/create')]")
+        @metadata_submit_button                  = @browser.element(xpath: '(//button[@type="submit"])[10]')
+        
+        # PAGE FIELDS
+        @metadata_name_text_field               = @browser.text_field(xpath: '(//input[@name="name"])[6]')
+        @metadata_protocol_select_list          = @browser.select_list(xpath: '(//select[@name="protocol"])[5]')
+        @metadata_api_key_text_field            = @browser.text_field(xpath: '(//input[@name="password"])[5]')
+    end
+
+    # PAGE ACTIONS
+    def fill_form_as_lsmm(name)
+        @create_metadata_button.wait_until(&:present?).click
+        # wait_for_loading_message(@metadata_loading_message)
+        @metadata_protocol_select_list.select "Library Simplified Metadata Wrangler"
+        @metadata_name_text_field.wait_until(&:present?).set(name)
+        @metadata_submit_button.wait_until(&:present?).click
+    end
+
+    # GETTERS
+    def loading_message
+        @metadata_loading_message
     end
 end

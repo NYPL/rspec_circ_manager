@@ -20,26 +20,25 @@ RSpec.describe "008: Metadata Tab" do
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         
-        # @admin_form = CircAdminAdminsForm.new(@browser)
+        @metadata_form = CircAdminMetadataForm.new(@browser)
+
+        @created_value = random_name
+        # @protocol = "Library Simplified Metadata Wrangler"
     end
 
     after(:each) do
-        # @admin_page.delete_by_value(browser_instance, tab, entry_value, loading_message)
+        @admin_page.delete_by_value_with_load(@browser, @admin_page.metadata_tab, @protocol, @metadata_form.loading_message)
         @browser.close
     end
 
-    xit "Returns success message with valid form fill" do
-        ENV['CIRC_USERNAME'] = "consultjsmith@nypl.org"
-        ENV['CIRC_PASSWORD'] = "turtlepower"
-
+    it "Returns success message with valid form fill" do
         @login_page.goto_url
         @login_page.login_as(ENV['CIRC_USERNAME'], ENV['CIRC_PASSWORD'])
         @admin_page.goto_url
         
-        # goto tab
+        @admin_page.metadata_tab.wait_until(&:present?).click
         
-        # fill form
-
+        @metadata_form.fill_form_as_lsmm(@created_value)
         expect(@admin_page.success_message.present?).to eql true
     end
 end
