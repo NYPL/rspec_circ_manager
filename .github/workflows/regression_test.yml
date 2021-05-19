@@ -2,7 +2,7 @@ name: 'Main Branch Regression Test'
 
 on:
   push:
-    branches: [ main, jsmith_patch ]
+    branches: [ main ]
   schedule:
     - cron:  '0 0 * * *'
 
