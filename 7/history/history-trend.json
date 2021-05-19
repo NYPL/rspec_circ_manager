@@ -11,6 +11,18 @@
     "total" : 12
   }
 }, {
+  "buildOrder" : 7,
+  "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 2,
+    "skipped" : 10,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
   "buildOrder" : 6,
   "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/6/",
   "reportName" : "Allure Report with history",

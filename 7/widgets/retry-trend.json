@@ -7,6 +7,14 @@
     "retry" : 0
   }
 }, {
+  "buildOrder" : 7,
+  "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 12,
+    "retry" : 0
+  }
+}, {
   "buildOrder" : 6,
   "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/6/",
   "reportName" : "Allure Report with history",

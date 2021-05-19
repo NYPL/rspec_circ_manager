@@ -34,17 +34,6 @@
       "total" : 1
     }
   }, {
-    "uid" : "f4241c04cad794f04fd50c30b4a7f8f3",
-    "name" : "005: Admin Authentication Tab",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 1,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
     "uid" : "5bb7543955480c5f3b6d2c420ac0b357",
     "name" : "004: Patron Authentication Tab",
     "statistic" : {
@@ -67,6 +56,17 @@
       "total" : 1
     }
   }, {
+    "uid" : "f4241c04cad794f04fd50c30b4a7f8f3",
+    "name" : "005: Admin Authentication Tab",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
     "uid" : "88b2ffd7f49405e0b801b88955ae2a26",
     "name" : "007: Logging Tab",
     "statistic" : {
@@ -78,8 +78,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "625b4e7cd146c3ddb9368a742867719b",
-    "name" : "008: Metadata Tab",
+    "uid" : "3e5dc0b38c3dc11cba61d003731eb2ab",
+    "name" : "009: Analytics Tab",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -89,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "3e5dc0b38c3dc11cba61d003731eb2ab",
-    "name" : "009: Analytics Tab",
+    "uid" : "625b4e7cd146c3ddb9368a742867719b",
+    "name" : "008: Metadata Tab",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

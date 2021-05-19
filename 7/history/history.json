@@ -2,13 +2,23 @@
   "f11a6d1c23b4b62f691845860c8471e5" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 2,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "c5375f64af38f3a5",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/c5375f64af38f3a5",
+      "status" : "broken",
+      "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//h2[text()=\\\"Library configuration\\\"]/../div[@class=\\\"loading\\\"]/h1\"}>\n\ntimed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//h3[text()='p60i1']/following-sibling::button\"}>",
+      "time" : {
+        "start" : 1621455936604,
+        "stop" : 1621456166836,
+        "duration" : 230232
+      }
+    }, {
       "uid" : "eb2ba9ce25596e8f",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/eb2ba9ce25596e8f",
       "status" : "broken",
@@ -42,12 +52,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "3429654fc6d01766",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/3429654fc6d01766",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395764,
+        "stop" : 1621456395764,
+        "duration" : 0
+      }
+    }, {
       "uid" : "dcb0adef3cc54b58",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/dcb0adef3cc54b58",
       "status" : "skipped",
@@ -80,12 +99,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "99e6594a4a517c70",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/99e6594a4a517c70",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395762,
+        "stop" : 1621456395762,
+        "duration" : 0
+      }
+    }, {
       "uid" : "30448c0afe5399cc",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/30448c0afe5399cc",
       "status" : "skipped",
@@ -118,12 +146,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "90794caa4a027dd1",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/90794caa4a027dd1",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395760,
+        "stop" : 1621456395760,
+        "duration" : 0
+      }
+    }, {
       "uid" : "995364f2bfc7f161",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/995364f2bfc7f161",
       "status" : "skipped",
@@ -156,12 +193,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "b488022fce69de08",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/b488022fce69de08",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395763,
+        "stop" : 1621456395763,
+        "duration" : 0
+      }
+    }, {
       "uid" : "109384be75ca6b16",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/109384be75ca6b16",
       "status" : "skipped",
@@ -194,12 +240,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "b37dba3c10e3381f",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/b37dba3c10e3381f",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395764,
+        "stop" : 1621456395764,
+        "duration" : 0
+      }
+    }, {
       "uid" : "f0d2112bc413c59b",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/f0d2112bc413c59b",
       "status" : "skipped",
@@ -232,12 +287,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "615b0b4c338d1b8b",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/615b0b4c338d1b8b",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395761,
+        "stop" : 1621456395761,
+        "duration" : 0
+      }
+    }, {
       "uid" : "203dd36e2dc4fab5",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/203dd36e2dc4fab5",
       "status" : "skipped",
@@ -270,12 +334,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "426df770fd5954e9",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/426df770fd5954e9",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395758,
+        "stop" : 1621456395758,
+        "duration" : 0
+      }
+    }, {
       "uid" : "adb3eef6a042b35e",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/adb3eef6a042b35e",
       "status" : "skipped",
@@ -308,12 +381,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "ec25ef42cd0ee952",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/ec25ef42cd0ee952",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395759,
+        "stop" : 1621456395759,
+        "duration" : 0
+      }
+    }, {
       "uid" : "4e412c98d53c885d",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/4e412c98d53c885d",
       "status" : "skipped",
@@ -346,12 +428,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "45494f3f41522ad8",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/45494f3f41522ad8",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395762,
+        "stop" : 1621456395762,
+        "duration" : 0
+      }
+    }, {
       "uid" : "9c4d4a9ce2cbf1de",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/9c4d4a9ce2cbf1de",
       "status" : "skipped",
@@ -383,13 +474,23 @@
   "4a54df37a883d6afb3982f304b4bf139" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 3,
+      "broken" : 4,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "ba401d6bd9e0e91d",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/ba401d6bd9e0e91d",
+      "status" : "broken",
+      "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//h2[text()=\\\"Individual admin configuration\\\"]/../div[@class=\\\"loading\\\"]/h1\"}>\n\ntimed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//h3[text()='gohml@gmail.com']/following-sibling::button\"}>",
+      "time" : {
+        "start" : 1621456166838,
+        "stop" : 1621456395755,
+        "duration" : 228917
+      }
+    }, {
       "uid" : "4536b847a9b61c3d",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/4536b847a9b61c3d",
       "status" : "broken",
@@ -425,12 +526,21 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 3,
+      "skipped" : 4,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "bf69de9187d0c363",
+      "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/bf69de9187d0c363",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1621456395760,
+        "stop" : 1621456395760,
+        "duration" : 0
+      }
+    }, {
       "uid" : "6c8c1c15b29e4f58",
       "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/7//#testresult/6c8c1c15b29e4f58",
       "status" : "skipped",
