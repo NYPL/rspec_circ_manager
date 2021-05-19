@@ -20,26 +20,21 @@ RSpec.describe "009: Analytics Tab" do
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         
-        # @admin_form = CircAdminAdminsForm.new(@browser)
+        @analytics_form = CircAdminAnalyticsForm.new(@browser)
     end
 
     after(:each) do
-        # @admin_page.delete_by_value(browser_instance, tab, entry_value, loading_message)
         @browser.close
     end
 
-    xit "Returns success message with valid form fill" do
-        ENV['CIRC_USERNAME'] = "consultjsmith@nypl.org"
-        ENV['CIRC_PASSWORD'] = "turtlepower"
-
+    it "Returns success message after resubmitting Local Analytics" do
         @login_page.goto_url
         @login_page.login_as(ENV['CIRC_USERNAME'], ENV['CIRC_PASSWORD'])
         @admin_page.goto_url
         
-        # goto tab
+        @admin_page.analytics_tab.wait_until(&:present?).click
         
-        # fill form
-
+        @analytics_form.resubmit_local_analytics_edit
         expect(@admin_page.success_message.present?).to eql true
     end
 end

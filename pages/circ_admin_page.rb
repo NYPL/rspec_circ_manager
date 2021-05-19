@@ -399,3 +399,93 @@ class CircAdminMetadataForm < CircAdminPage
         @metadata_loading_message
     end
 end
+
+class CircAdminAnalyticsForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+
+        @analytics_loading_message      = @browser.element(xpath: '//h2[text()="Analytics service configuration"]/../div[@class="loading"]/h1')
+        
+        # PAGE BUTTONS
+        @edit_local_analytics_button                = @browser.element(css: "div:nth-child(9) li:nth-child(1) > .edit-item svg")
+        @analytics_submit_button                    = @browser.element(xpath: '(//button[@type="submit"])[2]')
+    end
+
+    # PAGE ACTIONS
+    def resubmit_local_analytics_edit
+        # This assumes that "Local Analytics" is already set up
+        @edit_local_analytics_button.wait_until(&:present?).click
+        # wait_for_loading_message(@analytics_loading_message)
+        sleep(3)
+        @analytics_submit_button.wait_until(&:present?).click
+        sleep(2)
+    end
+
+    # GETTERS
+    def loading_message
+        @analytics_loading_message
+    end
+end
+
+class CircAdminCDNForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+        
+        # PAGE BUTTONS
+        @edit_cdn_button                = @browser.element(css: "div:nth-child(10) .edit-item svg")
+        @cdn_submit_button              = @browser.element(xpath: '//button[@type="submit"]')
+    end
+
+    # PAGE ACTIONS
+    def resubmit_cdn_edit
+        # This assumes that "https://cdn/" is already set up
+        @edit_cdn_button.wait_until(&:present?).click
+        sleep(3)
+        @cdn_submit_button.wait_until(&:present?).click
+        sleep(2)
+    end
+
+    # GETTERS
+end
+
+class CircAdminStorageForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+        
+        # PAGE BUTTONS
+        @edit_minIO_storage_button          = @browser.element(css: "div:nth-child(12) .edit-item svg")
+        @storage_submit_button              = @browser.element(xpath: '//button[@type="submit"]')
+    end
+
+    # PAGE ACTIONS
+    def resubmit_minIO_edit
+        # This assumes that "minIO" is already set up
+        @edit_minIO_storage_button.wait_until(&:present?).click
+        sleep(3)
+        @storage_submit_button.wait_until(&:present?).click
+        sleep(2)
+    end
+
+    # GETTERS
+end
+
+class CircAdminExtCatalogForm < CircAdminPage
+    def initialize(browser)
+        @browser = browser
+        
+        # PAGE BUTTONS
+        @edit_MARC_export_button            = @browser.element(xpath: "//a[contains(@href, '/admin/web/config/catalogServices/edit/13')]")
+        @external_catalog_submit_button     = @browser.element(xpath: '//button[@type="submit"]')
+    end
+
+    # PAGE ACTIONS
+    def resubmit_MARC_catalog_edit
+        # This assumes that "minIO" is already set up
+        @edit_MARC_export_button.wait_until(&:present?).click
+        sleep(3)
+        @external_catalog_submit_button.wait_until(&:present?).click
+        sleep(2)
+    end
+
+    # GETTERS
+end
