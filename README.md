@@ -46,4 +46,4 @@ To increase the quality of test framework, the following items should be worked 
 * Remove sleeps after refactoring _wait_for_loading_message_ method in _CircAdminPage_ page object (as mentioned in previous point).
 
 ## How to Contribute
-One can contribute to this automation test suite by branching off this suite, pushing changes from branch, and creating a pull request. Pull requests should pass automatic checks before being pushed to _main_ branch.
+One can contribute to this automation test suite by branching off this suite, pushing changes from branch, and creating a pull request. Pull requests should pass automatic checks before being pushed to _main_ branch. 
