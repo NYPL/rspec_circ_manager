@@ -1,4 +1,4 @@
-name: 'Main Branch Regression Test'
+name: 'CIRC Manager Regression Test'
 
 on:
   push:
@@ -55,3 +55,11 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+      - name: CIRC Manager Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env: 
+          SLACK_CHANNEL: test_reports
+          SLACK_MESSAGE: 'https://nypl.github.io/rspec_circ_manager'
+          SLACK_TITLE: CIRC Manager Test Results
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: circBot
