@@ -6,9 +6,9 @@ class CircLoginPage
         @email_text_field       = @browser.text_field(name: "email")
         @password_text_field    = @browser.text_field(name: "password")
         @submit_button          = @browser.element(type: "submit")
+        @login_url              = "https://disposable-circulation.librarysimplified.org/admin/web"
+        @admin_portal_url       = "https://disposable-circulation.librarysimplified.org/admin/web/config/libraries"
 
-        @login_url              = "https://dev-circulation.librarysimplified.org/admin/web"
-        @admin_portal_url       = "https://dev-circulation.librarysimplified.org/admin/web/config/libraries"
     end
 
     def goto_url

@@ -20,6 +20,13 @@ The two main pages covered in test suite include:
 
 Additionally, page objects for administrative forms are present in _circ_admin_page.rb_ file.
 
+## Configuration
+### Environment variables
+
+Test scripts are run against the teardown QA server at https://disposable-circulation.librarysimplified.org/
+
+The `CIRC_USERNAME` environment variable contains the username to use for authentication, and the `CIRC_PASSWORD` environment variable contains the password.
+
 ## How to Run Automation
 ### Scripts
 __NOTE: All commands mentioned here are to be run from the root project folder.__
