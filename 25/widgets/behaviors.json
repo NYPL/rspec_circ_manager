@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "82c8bddb0407dd826ad8ea28641ba0fd",
+    "name" : "spec/admin_form",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 12,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 12
+    }
+  } ]
+}
