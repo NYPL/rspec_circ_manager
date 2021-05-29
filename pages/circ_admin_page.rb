@@ -28,7 +28,7 @@ class CircAdminPage
         @external_catalogs_tab           = @browser.element(xpath: '//li/a[text()="External Catalogs"]')
         
         # URLs
-        @admin_portal_url       = "https://dev-circulation.librarysimplified.org/admin/web/config/libraries"
+        @admin_portal_url       = "https://disposable-circulation.librarysimplified.org/admin/web/config/libraries"
     end
 
     #  PAGE ACTIONS
@@ -161,7 +161,7 @@ class CircAdminLibrariesForm < CircAdminPage
     def fill_form (name, url, patron_support_email, vendor_email)
         @library_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
-        sleep(3)
+        sleep(10)
         @library_form_name_field.wait_until(&:present?).set(name)
         @library_form_short_name_field.wait_until(&:present?).set(name)
         @library_form_url_field.wait_until(&:present?).set(url)
@@ -169,7 +169,7 @@ class CircAdminLibrariesForm < CircAdminPage
         @library_form_vendor_email_field.wait_until(&:present?).set(vendor_email)
         @library_form_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
-        sleep(5)
+        sleep(10)
     end
 end
 
@@ -191,11 +191,11 @@ class CircAdminAdminsForm < CircAdminPage
     def fill_form (email)
         @admin_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@admin_loading_message)
-        sleep(3)
+        sleep(10)
         @admin_email_text_field.wait_until(&:present?).set(email)
         @admin_form_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@admin_loading_message)
-        sleep(5)
+        sleep(10)
     end
 
     # GETTERS
@@ -267,7 +267,7 @@ class CircAdminPatronAuthForm < CircAdminPage
     def fill_form_with_millenium_test_values (name)
         @create_patron_auth_button.wait_until(&:present?).click
         # wait_for_loading_message(@patron_auth_loading_message)
-        sleep(3)
+        sleep(10)
         @patron_auth_name_text_field.wait_until(&:present?).set(name)
         @patron_auth_protocol_select_list.wait_until(&:present?).select "Millenium"
         @patron_auth_url_text_field.wait_until(&:present?).set("https://millenium.com/")
@@ -276,7 +276,7 @@ class CircAdminPatronAuthForm < CircAdminPage
         @patron_auth_keyboard_id_select_list.wait_until(&:present?).select "System default"
         @patron_auth_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@patron_auth_loading_message)
-        sleep(5)
+        sleep(10)
     end
 
     # GETTERS
@@ -364,12 +364,12 @@ class CircAdminLoggingForm < CircAdminPage
     def fill_form_as_sysLog(name)
         @create_logging_button.wait_until(&:present?).click
         # wait_for_loading_message(@logging_loading_message)
-        sleep(3)
+        sleep(10)
         @logging_protocol_select_list.select "sysLog"
         @logging_name_text_field.wait_until(&:present?).set(name)
         @logging_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@logging_loading_message)
-        sleep(3)
+        sleep(10)
     end
 
     # GETTERS
@@ -398,9 +398,11 @@ class CircAdminMetadataForm < CircAdminPage
     def fill_form_as_lsmm(name)
         @create_metadata_button.wait_until(&:present?).click
         # wait_for_loading_message(@metadata_loading_message)
+        sleep(10)
         @metadata_protocol_select_list.select "Library Simplified Metadata Wrangler"
         @metadata_name_text_field.wait_until(&:present?).set(name)
         @metadata_submit_button.wait_until(&:present?).click
+        sleep(10)
     end
 
     # GETTERS
@@ -425,9 +427,9 @@ class CircAdminAnalyticsForm < CircAdminPage
         # This assumes that "Local Analytics" is already set up
         @edit_local_analytics_button.wait_until(&:present?).click
         # wait_for_loading_message(@analytics_loading_message)
-        sleep(3)
+        sleep(10)
         @analytics_submit_button.wait_until(&:present?).click
-        sleep(2)
+        sleep(10)
     end
 
     # GETTERS
@@ -449,9 +451,9 @@ class CircAdminCDNForm < CircAdminPage
     def resubmit_cdn_edit
         # This assumes that "https://cdn/" is already set up
         @edit_cdn_button.wait_until(&:present?).click
-        sleep(3)
+        sleep(10)
         @cdn_submit_button.wait_until(&:present?).click
-        sleep(2)
+        sleep(10)
     end
 
     # GETTERS
@@ -470,9 +472,9 @@ class CircAdminStorageForm < CircAdminPage
     def resubmit_minIO_edit
         # This assumes that "minIO" is already set up
         @edit_minIO_storage_button.wait_until(&:present?).click
-        sleep(3)
+        sleep(10)
         @storage_submit_button.wait_until(&:present?).click
-        sleep(2)
+        sleep(10)
     end
 
     # GETTERS
@@ -491,9 +493,9 @@ class CircAdminExtCatalogForm < CircAdminPage
     def resubmit_MARC_catalog_edit
         # This assumes that "minIO" is already set up
         @edit_MARC_export_button.wait_until(&:present?).click
-        sleep(3)
+        sleep(10)
         @external_catalog_submit_button.wait_until(&:present?).click
-        sleep(2)
+        sleep(10)
     end
 
     # GETTERS

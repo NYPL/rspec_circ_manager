@@ -108,7 +108,7 @@ RSpec.configure do |config|
 
   # Below configuration section is associated with retry logic utilizing 
   # rspec/retry gem.
-  config.default_retry_count = 3
+  config.default_retry_count = 1
   config.default_sleep_interval = 10
   config.verbose_retry = true
   config.display_try_failure_messages = true
@@ -118,9 +118,20 @@ RSpec.configure do |config|
   config.failure_exit_code = 0
 
   # After running an example, take an Allure screenshot on failure.
-  config.after(:each) {
+  config.after(:each) do |example|
+    # puts @browser.to_s
+    # screenshot_file = @browser.screenshot.save "./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png"
 
-  }
+
+    # if example.exception
+    #   Allure.step(name: 'Screenshot')
+    #   Allure.add_attachment(
+    #     name: 'After hook attach',
+    #     source: File.open(screenshot_file),
+    #     type: Allure::ContentType::PNG
+    #   )
+    # end
+  end
 end
 
 def random_email(email_string_length=5, domain="@gmail.com")
