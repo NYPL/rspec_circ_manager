@@ -55,5 +55,8 @@ build-iPhoneSimulator/
 # Allure reporting will generate report files, which do not need committed
 reports
 
+# Screenshots stored in file
+screenshots
+
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
