@@ -441,18 +441,41 @@ end
 class CircAdminCDNForm < CircAdminPage
     def initialize(browser)
         @browser = browser
+
+        # FORM FIELDS
+        @cdn_name_field                         = @browser.text_field(xpath: "(//input[@name='name'])[8]")
+        @cdn_protocol_select_list               = @browser.select_list(xpath: "(//select[@name='protocol'])[7]")
+        @cdn_url_field                          = @browser.text_field(xpath: "(//input[@name='url'])[4]")
+        @cdn_domain_field                       = @browser.text_field(name: "mirrored_domain")
         
         # PAGE BUTTONS
-        @edit_cdn_button                = @browser.element(css: "div:nth-child(10) .edit-item svg")
-        @cdn_submit_button              = @browser.element(xpath: '//button[@type="submit"]')
+        @edit_cdn_button                        = @browser.element(css: "div:nth-child(10) .edit-item svg")
+        @cdn_new_submit_button                  = @browser.element(xpath: "(//button[@type='submit'])[12]")
+        @cdn_existing_submit_button             = @browser.element(xpath: "//button[@type='submit']")
+        @create_cdn_service_button              = @browser.element(xpath: "//a[contains(@href,'/admin/web/config/cdn/create')]")
     end
 
     # PAGE ACTIONS
     def resubmit_cdn_edit
         # This assumes that "https://cdn/" is already set up
+        # sleep(300)
         @edit_cdn_button.wait_until(&:present?).click
         sleep(10)
-        @cdn_submit_button.wait_until(&:present?).click
+        @cdn_existing_submit_button.wait_until(&:present?).click
+        sleep(10)
+    end
+
+    def fill_form_as_cdn(name="test cdn 1", protocol="CDN", url="https://cdn/", mirrored_domain="original.com")
+        @create_cdn_service_button.wait_until(&:present?).click
+        puts "button clicked!"
+        sleep(10)
+        puts "made it to page"
+        @cdn_protocol_select_list.select protocol
+        @cdn_name_field.wait_until(&:present?).set(name)
+        @cdn_url_field.wait_until(&:present?).set(url)
+        @cdn_domain_field.wait_until(&:present?).set(mirrored_domain)
+        @cdn_new_submit_button.wait_until(&:present?).click
+        puts "submit button clicked!"
         sleep(10)
     end
 
@@ -486,7 +509,7 @@ class CircAdminExtCatalogForm < CircAdminPage
         
         # PAGE BUTTONS
         @edit_MARC_export_button            = @browser.element(xpath: "//a[contains(@href, '/admin/web/config/catalogServices/edit/13')]")
-        @external_catalog_submit_button     = @browser.element(xpath: '//button[@type="submit"]')
+        @external_catalog_submit_button     = @browser.element(xpath: '(//button[@type="submit"])[2]')
     end
 
     # PAGE ACTIONS

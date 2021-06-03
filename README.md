@@ -23,7 +23,7 @@ Additionally, page objects for administrative forms are present in _circ_admin_p
 ## Configuration
 ### Environment variables
 
-Test scripts are run against the teardown QA server at https://disposable-circulation.librarysimplified.org/
+Test scripts are run against the teardown QA server at https://qa-circulation.librarysimplified.org/
 
 The `CIRC_USERNAME` environment variable contains the username to use for authentication, and the `CIRC_PASSWORD` environment variable contains the password.
 
