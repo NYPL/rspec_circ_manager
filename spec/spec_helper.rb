@@ -119,7 +119,7 @@ RSpec.configure do |config|
 
   config.before(:each) do |example|
     if ENV['app_type'] == 'headless'
-      opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless','--window-size=1200x1000'])
+      opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless','--start-maximized'])
       client = Selenium::WebDriver::Remote::Http::Default.new
       client.open_timeout = 180
       client.read_timeout = 180
