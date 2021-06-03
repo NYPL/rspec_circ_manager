@@ -118,28 +118,32 @@ RSpec.configure do |config|
   config.failure_exit_code = 0
 
   config.before(:each) do |example|
+    @client = Selenium::WebDriver::Remote::Http::Default.new
+      @client.open_timeout = 180
+      @client.read_timeout = 180
+      @profile = Selenium::WebDriver::Chrome::Profile.new
+      @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+      @profile['browser.download.folderList'] = 2
+      @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+      puts @client.to_s
+      puts @profile.to_s
+
     if ENV['app_type'] == 'headless'
-      $opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless','--start-maximized'])
-      @client = Selenium::WebDriver::Remote::Http::Default.new
-      @client.open_timeout = 180
-      @client.read_timeout = 180
-      @profile = Selenium::WebDriver::Chrome::Profile.new
-      @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
-      @profile['browser.download.folderList'] = 2
-      @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+      $opts = Selenium::WebDriver::Chrome::Options::new
+      chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+      $opts.binary = chrome_bin_path if chrome_bin_path
+      $opts.add_argument('--headless')
+      $opts.add_argument('--start-maximized')
+      puts $opts.to_s
+      @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :options => $opts
     else
-      @client = Selenium::WebDriver::Remote::Http::Default.new
-      @client.open_timeout = 180
-      @client.read_timeout = 180
-      @profile = Selenium::WebDriver::Chrome::Profile.new
-      @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
-      @profile['browser.download.folderList'] = 2
-      @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+      $opts = Selenium::WebDriver::Chrome::Options::new
+      chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+      $opts.binary = chrome_bin_path if chrome_bin_path
+      @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client
     end
-    puts $opts.to_s
-    puts @client.to_s
-    puts @profile.to_s
-    @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :options => $opts
+    
+    
   end
 
   # After running an example, take an Allure screenshot on failure.
