@@ -30,4 +30,4 @@ jobs:
           gem install bundler
           bundle install
       - name: Run RSpec Test
-        run: app_type=headless rspec
+        run: app_type=headless rspec spec/admin_form/008_metadata_tab_spec.rb
