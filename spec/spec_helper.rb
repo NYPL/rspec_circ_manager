@@ -147,21 +147,21 @@ RSpec.configure do |config|
   end
 
   # After running an example, take an Allure screenshot on failure.
-  config.after(:each) do |example|
-    puts @browser.to_s
-    screenshot_file = File.expand_path("./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png")
-    puts screenshot_file.to_s
-    @browser.screenshot.save(screenshot_file)
+  # config.after(:each) do |example|
+  #   puts @browser.to_s
+  #   screenshot_file = File.expand_path("./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png")
+  #   puts screenshot_file.to_s
+  #   @browser.screenshot.save(screenshot_file)
 
-    if example.exception
-      Allure.step(name: 'Screenshot')
-      Allure.add_attachment(
-        name: 'After hook attach',
-        source: File.open(screenshot_file),
-        type: Allure::ContentType::PNG
-      )
-    end
-  end
+  #   if example.exception
+  #     Allure.step(name: 'Screenshot')
+  #     Allure.add_attachment(
+  #       name: 'After hook attach',
+  #       source: File.open(screenshot_file),
+  #       type: Allure::ContentType::PNG
+  #     )
+  #   end
+  # end
 end
 
 def random_email(email_string_length=5, domain="@gmail.com")
