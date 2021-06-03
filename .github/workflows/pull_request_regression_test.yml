@@ -1,0 +1,33 @@
+name: 'CIRC Manager Regression Test (Pull Request)'
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ubuntu-job:
+    name: 'Test on Ubuntu'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['3.0.0']
+    env: 
+        NODE_ENV: test
+        SELENIUM_HUB_HOST: hub
+        TEST_HOST: testHost
+        CIRC_USERNAME: ${{ secrets.CIRC_USERNAME }}
+        CIRC_PASSWORD: ${{ secrets.CIRC_PASSWORD }}
+    steps:
+      # The next 3 steps are for building the web application to be tested and starting the web server on the runner environment
+      - name: 'Checkout the repository'
+        uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1 
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+      - name: Run bundler & gem installs
+        run: |
+          gem install bundler
+          bundle install
+      - name: Run RSpec Test
+        run: app_type=headless rspec

@@ -108,7 +108,7 @@ RSpec.configure do |config|
 
   # Below configuration section is associated with retry logic utilizing 
   # rspec/retry gem.
-  config.default_retry_count = 3
+  config.default_retry_count = 1
   config.default_sleep_interval = 10
   config.verbose_retry = true
   config.display_try_failure_messages = true
@@ -119,33 +119,44 @@ RSpec.configure do |config|
 
   config.before(:each) do |example|
     if ENV['app_type'] == 'headless'
-      opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless','--start-maximized'])
-      client = Selenium::WebDriver::Remote::Http::Default.new
-      client.open_timeout = 180
-      client.read_timeout = 180
-      @browser = Watir::Browser.new :chrome, :http_client => client, :options => opts
-  else
-      client = Selenium::WebDriver::Remote::Http::Default.new
-      client.open_timeout = 180
-      client.read_timeout = 180
-      @browser = Watir::Browser.new :chrome, :http_client => client
-  end
+      $opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless','--start-maximized'])
+      @client = Selenium::WebDriver::Remote::Http::Default.new
+      @client.open_timeout = 180
+      @client.read_timeout = 180
+      @profile = Selenium::WebDriver::Chrome::Profile.new
+      @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+      @profile['browser.download.folderList'] = 2
+      @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+    else
+      @client = Selenium::WebDriver::Remote::Http::Default.new
+      @client.open_timeout = 180
+      @client.read_timeout = 180
+      @profile = Selenium::WebDriver::Chrome::Profile.new
+      @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+      @profile['browser.download.folderList'] = 2
+      @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+    end
+    puts $opts.to_s
+    puts @client.to_s
+    puts @profile.to_s
+    @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :options => $opts
   end
 
   # After running an example, take an Allure screenshot on failure.
   config.after(:each) do |example|
-    # puts @browser.to_s
-    # screenshot_file = @browser.screenshot.save "./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png"
+    puts @browser.to_s
+    screenshot_file = File.expand_path("./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png")
+    puts screenshot_file.to_s
+    @browser.driver.save_screenshot(screenshot_file)
 
-
-    # if example.exception
-    #   Allure.step(name: 'Screenshot')
-    #   Allure.add_attachment(
-    #     name: 'After hook attach',
-    #     source: File.open(screenshot_file),
-    #     type: Allure::ContentType::PNG
-    #   )
-    # end
+    if example.exception
+      Allure.step(name: 'Screenshot')
+      Allure.add_attachment(
+        name: 'After hook attach',
+        source: File.open(screenshot_file),
+        type: Allure::ContentType::PNG
+      )
+    end
   end
 end
 

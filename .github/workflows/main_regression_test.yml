@@ -1,9 +1,7 @@
-name: 'CIRC Manager Regression Test'
+name: 'CIRC Manager Regression Test (Main)'
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
   schedule:
     - cron:  '0 0 * * *'
