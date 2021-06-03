@@ -30,6 +30,8 @@ jobs:
           gem install bundler
           bundle install
       - name: Run RSpec Test
-        run: app_type=headless rspec ./spec/admin_form/001_libraries_tab_spec.rb
+        run: |
+          app_type=headless rspec ./spec/admin_form/001_libraries_tab_spec.rb
+          app_type=headless rspec ./spec/admin_form/002_admins_tab_spec.rb
       - name: Check for Files
         run: ls
