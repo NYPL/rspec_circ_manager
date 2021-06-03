@@ -138,13 +138,15 @@ RSpec.configure do |config|
       puts $opts.to_s
       @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :desired_capabilities => @capabilities, :options => $opts
       puts "Window Size: #{@browser.driver.manage.window.size}"
-
+      @browser.ready_state.eql? "complete"
     else
       $opts = Selenium::WebDriver::Chrome::Options::new
       # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
       # $opts.binary = chrome_bin_path if chrome_bin_path
       @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client
       @browser.instance_variable_set :@speed, :slow
+      @browser.window.maximize()
+      @browser.ready_state.eql? "complete"
     end
     
     
