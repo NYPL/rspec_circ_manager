@@ -215,7 +215,8 @@ class CircAdminCollectionsForm < CircAdminPage
         @collections_submit_button          = @browser.element(xpath: '(//button[@type="submit"])[5]')
 
         # Admins Form Fields
-        @collections_name_text_field        = @browser.text_field(xpath: '(//input[@name="name"])[2]')
+        @collections_name_text_field_1      = @browser.text_field(xpath: '(//input[@name="name"])[1]')
+        @collections_name_text_field_2      = @browser.text_field(xpath: '(//input[@name="name"])[2]')
         @collections_protocol_select_list   = @browser.select_list(xpath: '//select[@name="protocol"]')
 
         @collections_library_id_text_field  = @browser.text_field(xpath: '//input[@name="external_account_id"]')
@@ -227,15 +228,21 @@ class CircAdminCollectionsForm < CircAdminPage
     # PAGE ACTIONS
     def fill_form_with_overdrive_test_values (name)
         @create_collection_button.wait_until(&:present?).click
-        @collections_loading_message.wait_while(&:present?)
-        @collections_name_text_field.wait_until(&:present?).set(name)
+        # @collections_loading_message.wait_while(&:present?)
+        sleep(10)
+        if @collections_name_text_field_1.present?
+            @collections_name_text_field_1.wait_until(&:present?).set(name)
+        elsif @collections_name_text_field_2.present?
+            @collections_name_text_field_2.wait_until(&:present?).set(name)
+        end
         @collections_protocol_select_list.wait_until(&:present?).select "Overdrive"
         @collections_library_id_text_field.wait_until(&:present?).set("test")
         @collections_website_id_text_field.wait_until(&:present?).set("test")
         @collections_client_key_text_field.wait_until(&:present?).set("test")
         @collections_client_secret_text_field.wait_until(&:present?).set("test")
         @collections_submit_button.wait_until(&:present?).click
-        @collections_loading_message.wait_while(&:present?)
+        # @collections_loading_message.wait_while(&:present?)
+        sleep(10)
     end
 
     # GETTERS
@@ -508,8 +515,8 @@ class CircAdminExtCatalogForm < CircAdminPage
         @browser = browser
         
         # PAGE BUTTONS
-        @edit_MARC_export_button            = @browser.element(xpath: "//a[contains(@href, '/admin/web/config/catalogServices/edit/13')]")
-        @external_catalog_submit_button     = @browser.element(xpath: '(//button[@type="submit"])[2]')
+        @edit_MARC_export_button            = @browser.element(css: "div:nth-child(13) .edit-item svg")
+        @external_catalog_submit_button     = @browser.element(xpath: '//button[@type="submit"]')
     end
 
     # PAGE ACTIONS
