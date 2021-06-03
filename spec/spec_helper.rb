@@ -147,7 +147,7 @@ RSpec.configure do |config|
     puts @browser.to_s
     screenshot_file = File.expand_path("./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png")
     puts screenshot_file.to_s
-    @browser.driver.save_screenshot(screenshot_file)
+    @browser.screenshot.save(screenshot_file)
 
     if example.exception
       Allure.step(name: 'Screenshot')
