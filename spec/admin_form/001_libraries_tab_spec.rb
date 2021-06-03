@@ -11,6 +11,41 @@ RSpec.describe "001: Libraries Tab" do
     end
 
     before(:each) do
+
+        
+        @client = Selenium::WebDriver::Remote::Http::Default.new
+            @client.open_timeout = 180
+            @client.read_timeout = 180
+            @profile = Selenium::WebDriver::Chrome::Profile.new
+            @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+            @profile['browser.download.folderList'] = 2
+            @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+            puts @client.to_s
+            puts @profile.to_s
+
+        if ENV['app_type'] == 'headless'
+            $opts = Selenium::WebDriver::Chrome::Options::new
+            # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+            # $opts.binary = chrome_bin_path if chrome_bin_path
+            $opts.add_argument('--headless')
+            $opts.add_argument('--window-size=1920x1080')
+            @capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(accept_insecure_certs: true)
+            puts $opts.to_s
+            @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :desired_capabilities => @capabilities, :options => $opts
+            puts "Window Size: #{@browser.driver.manage.window.size}"
+            @browser.ready_state.eql? "complete"
+        else
+            $opts = Selenium::WebDriver::Chrome::Options::new
+            # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+            # $opts.binary = chrome_bin_path if chrome_bin_path
+            @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client
+            @browser.instance_variable_set :@speed, :slow
+            @browser.window.maximize()
+            @browser.ready_state.eql? "complete"
+        end
+            
+            
+        
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         @libraries_form = CircAdminLibrariesForm.new(@browser)
