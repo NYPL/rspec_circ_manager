@@ -11,8 +11,6 @@ RSpec.describe "010: CDN Tab" do
     end
 
     before(:each) do
-<<<<<<< HEAD
-=======
         # Browser launch to be handled by launch_browser_instance in spec_helper in future
         if ENV['app_type'] == 'headless'
             opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless'])
@@ -29,7 +27,6 @@ RSpec.describe "010: CDN Tab" do
 
         # @created_value = random_name
         
->>>>>>> main
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         
