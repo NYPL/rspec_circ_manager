@@ -133,7 +133,7 @@ RSpec.configure do |config|
       # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
       # $opts.binary = chrome_bin_path if chrome_bin_path
       $opts.add_argument('--headless')
-      $opts.add_argument('--window-size=1200x1000')
+      $opts.add_argument('--window-size=1920x1080')
       @capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(accept_insecure_certs: true)
       puts $opts.to_s
       @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :desired_capabilities => @capabilities, :options => $opts
