@@ -130,18 +130,21 @@ RSpec.configure do |config|
 
     if ENV['app_type'] == 'headless'
       $opts = Selenium::WebDriver::Chrome::Options::new
-      chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
-      $opts.binary = chrome_bin_path if chrome_bin_path
+      # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+      # $opts.binary = chrome_bin_path if chrome_bin_path
       $opts.add_argument('--headless')
-      $opts.add_argument('--start-maximized')
+      $opts.add_argument('--window-size=1200x1000')
       @capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(accept_insecure_certs: true)
       puts $opts.to_s
       @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :desired_capabilities => @capabilities, :options => $opts
+      puts "Window Size: #{@browser.driver.manage.window.size}"
+
     else
       $opts = Selenium::WebDriver::Chrome::Options::new
-      chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
-      $opts.binary = chrome_bin_path if chrome_bin_path
+      # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+      # $opts.binary = chrome_bin_path if chrome_bin_path
       @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client
+      @browser.instance_variable_set :@speed, :slow
     end
     
     
