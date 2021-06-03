@@ -134,8 +134,9 @@ RSpec.configure do |config|
       $opts.binary = chrome_bin_path if chrome_bin_path
       $opts.add_argument('--headless')
       $opts.add_argument('--start-maximized')
+      @capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(accept_insecure_certs: true)
       puts $opts.to_s
-      @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :options => $opts
+      @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :desired_capabilities => @capabilities, :options => $opts
     else
       $opts = Selenium::WebDriver::Chrome::Options::new
       chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
