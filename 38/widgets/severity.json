@@ -1,0 +1,161 @@
+[ {
+  "uid" : "ecb684e9e9af04d9",
+  "name" : "Returns success message with valid form fill",
+  "time" : {
+    "start" : 1622938870150,
+    "stop" : 1622938999622,
+    "duration" : 129472
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "38b47d87f939830a",
+  "name" : "Returns success message with valid form fill",
+  "time" : {
+    "start" : 1622938740695,
+    "stop" : 1622938870149,
+    "duration" : 129454
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "64102b51d87b6ff3",
+  "name" : "Returns success message with valid form fill (MANUAL)",
+  "time" : {
+    "start" : 1622939258426,
+    "stop" : 1622939258426,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "a3a65de47d9abed9",
+  "name" : "Exists after clicking tab",
+  "time" : {
+    "start" : 1622939128987,
+    "stop" : 1622939258424,
+    "duration" : 129437
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "744af05f81251986",
+  "name" : "Returns success message with valid form fill",
+  "time" : {
+    "start" : 1622939424331,
+    "stop" : 1622939553776,
+    "duration" : 129445
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "269a2c99b69bfe95",
+  "name" : "Displays key text field in form",
+  "time" : {
+    "start" : 1622939294781,
+    "stop" : 1622939294781,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a3de8c210f95a5bb",
+  "name" : "Returns success message after resubmitting https://cdn/",
+  "time" : {
+    "start" : 1622939683205,
+    "stop" : 1622939812569,
+    "duration" : 129364
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "102ed12d593ea97f",
+  "name" : "Returns success message with valid form fill (MANUAL)",
+  "time" : {
+    "start" : 1622939294783,
+    "stop" : 1622939294783,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "435fee118bdec420",
+  "name" : "Displays submit button in form",
+  "time" : {
+    "start" : 1622939294783,
+    "stop" : 1622939294783,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "dff5ac3f45981e32",
+  "name" : "Returns success message with valid form fill",
+  "time" : {
+    "start" : 1622939294939,
+    "stop" : 1622939424329,
+    "duration" : 129390
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c74f1eeeb7fafc54",
+  "name" : "Returns success message after resubmitting MARC Export catalog",
+  "time" : {
+    "start" : 1622939942168,
+    "stop" : 1622940071671,
+    "duration" : 129503
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d426cffc0eb1842d",
+  "name" : "Displays value text field in form",
+  "time" : {
+    "start" : 1622939294782,
+    "stop" : 1622939294782,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9271d3246f51428",
+  "name" : "Returns success after resubmitting MinIO storage edit",
+  "time" : {
+    "start" : 1622939812570,
+    "stop" : 1622939942167,
+    "duration" : 129597
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2e18122047eb6b0c",
+  "name" : "Returns success message with valid form fill",
+  "time" : {
+    "start" : 1622938999623,
+    "stop" : 1622939128986,
+    "duration" : 129363
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "31169c13610d93df",
+  "name" : "Returns success message with valid form fill",
+  "time" : {
+    "start" : 1622938605067,
+    "stop" : 1622938740693,
+    "duration" : 135626
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "aa3ee6bb6b3e3ffc",
+  "name" : "Returns success message after resubmitting Local Analytics",
+  "time" : {
+    "start" : 1622939553778,
+    "stop" : 1622939683204,
+    "duration" : 129426
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
