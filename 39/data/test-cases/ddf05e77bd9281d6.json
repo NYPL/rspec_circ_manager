@@ -1,0 +1,131 @@
+{
+  "uid" : "ddf05e77bd9281d6",
+  "name" : "Returns success message with valid form fill",
+  "fullName" : "007: Logging Tab Returns success message with valid form fill",
+  "historyId" : "41714982aac88ddd1b624390ef55420e",
+  "time" : {
+    "start" : 1623025636089,
+    "stop" : 1623025765322,
+    "duration" : 129233
+  },
+  "description" : "Location - spec/admin_form/007_logging_tab_spec.rb:41",
+  "descriptionHtml" : "Location - spec/admin_form/007_logging_tab_spec.rb:41",
+  "status" : "broken",
+  "statusMessage" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Logging\\\"]\"}>",
+  "statusTrace" : "/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/watir-6.19.1/lib/watir/wait.rb:46:in `until'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/watir-6.19.1/lib/watir/wait.rb:125:in `wait_until'\n/home/runner/work/rspec_circ_manager/rspec_circ_manager/spec/admin_form/007_logging_tab_spec.rb:46:in `block (2 levels) in <top (required)>'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:262:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:262:in `block in run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `block in with_around_and_singleton_context_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `block in with_around_example_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `block in run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:350:in `call'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:390:in `execute_with'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:350:in `call'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `with_around_example_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `with_around_and_singleton_context_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:259:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:644:in `block in run_examples'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `map'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `run_examples'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:606:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `map'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2067:in `with_suite_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:116:in `block in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/reporter.rb:74:in `report'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:115:in `run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:89:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:71:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:45:in `invoke'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/exe/rspec:4:in `<top (required)>'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/bin/rspec:23:in `load'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/bin/rspec:23:in `<main>'",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "rspec"
+  }, {
+    "name" : "package",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "testClass",
+    "value" : "007_logging_tab_spec"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "epic",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "feature",
+    "value" : "007: Logging Tab"
+  }, {
+    "name" : "suite",
+    "value" : "007: Logging Tab"
+  }, {
+    "name" : "thread",
+    "value" : "48560"
+  }, {
+    "name" : "host",
+    "value" : "fv-az243-504"
+  }, {
+    "name" : "language",
+    "value" : "ruby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 6,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "dff5ac3f45981e32",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/38//#testresult/dff5ac3f45981e32",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Logging\\\"]\"}>",
+        "time" : {
+          "start" : 1622939294939,
+          "stop" : 1622939424329,
+          "duration" : 129390
+        }
+      }, {
+        "uid" : "aedd9d7bf7a3fd7b",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/37//#testresult/aedd9d7bf7a3fd7b",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Logging\\\"]\"}>",
+        "time" : {
+          "start" : 1622853172794,
+          "stop" : 1622853302797,
+          "duration" : 130003
+        }
+      }, {
+        "uid" : "596d5b35d5b75716",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/36//#testresult/596d5b35d5b75716",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Logging\\\"]\"}>",
+        "time" : {
+          "start" : 1622767195982,
+          "stop" : 1622767325877,
+          "duration" : 129895
+        }
+      }, {
+        "uid" : "a7d44da34cbb328c",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/35//#testresult/a7d44da34cbb328c",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Logging\\\"]\"}>",
+        "time" : {
+          "start" : 1622747287491,
+          "stop" : 1622747416831,
+          "duration" : 129340
+        }
+      }, {
+        "uid" : "7b60d2577150250c",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/34//#testresult/7b60d2577150250c",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Logging\\\"]\"}>",
+        "time" : {
+          "start" : 1622746798447,
+          "stop" : 1622746928206,
+          "duration" : 129759
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ddf05e77bd9281d6.json",
+  "parameterValues" : [ ]
+}
