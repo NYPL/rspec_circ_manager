@@ -1,0 +1,171 @@
+{
+  "uid" : "989e7edda3df369d",
+  "name" : "Displays key text field in form",
+  "fullName" : "006: Sitewide Settings Tab Displays key text field in form",
+  "historyId" : "1a318f427a9427829ba124730fe6dd30",
+  "time" : {
+    "start" : 1623370723121,
+    "stop" : 1623370723121,
+    "duration" : 0
+  },
+  "description" : "Location - spec/admin_form/006_sitewide_settings_tab_spec.rb:40",
+  "descriptionHtml" : "Location - spec/admin_form/006_sitewide_settings_tab_spec.rb:40",
+  "status" : "broken",
+  "statusMessage" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+  "statusTrace" : "/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/watir-6.19.1/lib/watir/wait.rb:46:in `until'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/watir-6.19.1/lib/watir/wait.rb:125:in `wait_until'\n/home/runner/work/rspec_circ_manager/rspec_circ_manager/spec/admin_form/006_sitewide_settings_tab_spec.rb:31:in `block (2 levels) in <top (required)>'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:365:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:365:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:528:in `each'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:480:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:553:in `block in run_before_context_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/memoized_helpers.rb:186:in `block in isolate_for_context_hook'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/memoized_helpers.rb:182:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:552:in `run_before_context_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:605:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `map'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2067:in `with_suite_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:116:in `block in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/reporter.rb:74:in `report'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:115:in `run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:89:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:71:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:45:in `invoke'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/exe/rspec:4:in `<top (required)>'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/bin/rspec:23:in `load'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/bin/rspec:23:in `<main>'",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "rspec"
+  }, {
+    "name" : "package",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "testClass",
+    "value" : "006_sitewide_settings_tab_spec"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "epic",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "feature",
+    "value" : "006: Sitewide Settings Tab"
+  }, {
+    "name" : "suite",
+    "value" : "006: Sitewide Settings Tab"
+  }, {
+    "name" : "thread",
+    "value" : "48560"
+  }, {
+    "name" : "host",
+    "value" : "fv-az249-720"
+  }, {
+    "name" : "language",
+    "value" : "ruby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 10,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "6627db82e16d1e82",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/42//#testresult/6627db82e16d1e82",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1623284333668,
+          "stop" : 1623284333668,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1628a7ff31d78b83",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/41//#testresult/1628a7ff31d78b83",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1623197969908,
+          "stop" : 1623197969908,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "64739dc41bdab04b",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/40//#testresult/64739dc41bdab04b",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1623112240996,
+          "stop" : 1623112240996,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "83c80be5dd2b4e16",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/39//#testresult/83c80be5dd2b4e16",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1623025635931,
+          "stop" : 1623025635931,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "269a2c99b69bfe95",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/38//#testresult/269a2c99b69bfe95",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1622939294781,
+          "stop" : 1622939294781,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b66177f69d31cc82",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/37//#testresult/b66177f69d31cc82",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1622853172638,
+          "stop" : 1622853172638,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1e7702e3881ab084",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/36//#testresult/1e7702e3881ab084",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:xpath=>\"//li/a[text()=\\\"Sitewide Settings\\\"]\"}>",
+        "time" : {
+          "start" : 1622767195824,
+          "stop" : 1622767195824,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b84da2fbb04894ea",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/35//#testresult/b84da2fbb04894ea",
+        "status" : "broken",
+        "statusDetails" : "undefined method `text_field' for nil:NilClass",
+        "time" : {
+          "start" : 1622747287472,
+          "stop" : 1622747287473,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "a12a161277947bbe",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/34//#testresult/a12a161277947bbe",
+        "status" : "broken",
+        "statusDetails" : "undefined method `text_field' for nil:NilClass",
+        "time" : {
+          "start" : 1622746798429,
+          "stop" : 1622746798430,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "989e7edda3df369d.json",
+  "parameterValues" : [ ]
+}
