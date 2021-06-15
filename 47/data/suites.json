@@ -1,0 +1,261 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "001: Libraries Tab",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "aa4804f74b652a55",
+      "parentUid" : "96aabbff505d93047c780f1a57d36679",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623715666116,
+        "stop" : 1623715796360,
+        "duration" : 130244
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "96aabbff505d93047c780f1a57d36679"
+  }, {
+    "name" : "002: Admins Tab",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "9e9eb139e424e224",
+      "parentUid" : "6f0d3e1cefa067973bed368584c70df6",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623715796362,
+        "stop" : 1623715924761,
+        "duration" : 128399
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6f0d3e1cefa067973bed368584c70df6"
+  }, {
+    "name" : "003: Collections Tab",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "a56bbde8b864382a",
+      "parentUid" : "9c5974dc3d28cbb74ab9f797f8772496",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623715924762,
+        "stop" : 1623716053451,
+        "duration" : 128689
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9c5974dc3d28cbb74ab9f797f8772496"
+  }, {
+    "name" : "004: Patron Authentication Tab",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "e8fad9d4ecf9b90c",
+      "parentUid" : "5bb7543955480c5f3b6d2c420ac0b357",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716053453,
+        "stop" : 1623716181943,
+        "duration" : 128490
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5bb7543955480c5f3b6d2c420ac0b357"
+  }, {
+    "name" : "005: Admin Authentication Tab",
+    "children" : [ {
+      "name" : "Exists after clicking tab",
+      "uid" : "304fe79a058621f5",
+      "parentUid" : "f4241c04cad794f04fd50c30b4a7f8f3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716181945,
+        "stop" : 1623716310436,
+        "duration" : 128491
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill (MANUAL)",
+      "uid" : "b3072e3cdbebb086",
+      "parentUid" : "f4241c04cad794f04fd50c30b4a7f8f3",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1623716310439,
+        "stop" : 1623716310439,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f4241c04cad794f04fd50c30b4a7f8f3"
+  }, {
+    "name" : "006: Sitewide Settings Tab",
+    "children" : [ {
+      "name" : "Displays key text field in form",
+      "uid" : "9ed58b8cfd61b0aa",
+      "parentUid" : "5295f7048a0349b5109daac10fe36e0f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716346394,
+        "stop" : 1623716346394,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Displays value text field in form",
+      "uid" : "65ad551b8d13bcd3",
+      "parentUid" : "5295f7048a0349b5109daac10fe36e0f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716346395,
+        "stop" : 1623716346396,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Displays submit button in form",
+      "uid" : "74a9be232382a4d6",
+      "parentUid" : "5295f7048a0349b5109daac10fe36e0f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716346396,
+        "stop" : 1623716346396,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Returns success message with valid form fill (MANUAL)",
+      "uid" : "9a89c72c60f15cdb",
+      "parentUid" : "5295f7048a0349b5109daac10fe36e0f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716346397,
+        "stop" : 1623716346397,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5295f7048a0349b5109daac10fe36e0f"
+  }, {
+    "name" : "007: Logging Tab",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "39a05787b2657e61",
+      "parentUid" : "88b2ffd7f49405e0b801b88955ae2a26",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716346555,
+        "stop" : 1623716475163,
+        "duration" : 128608
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "88b2ffd7f49405e0b801b88955ae2a26"
+  }, {
+    "name" : "008: Metadata Tab",
+    "children" : [ {
+      "name" : "Returns success message with valid form fill",
+      "uid" : "d07317e7301ef9f7",
+      "parentUid" : "625b4e7cd146c3ddb9368a742867719b",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716475164,
+        "stop" : 1623716603683,
+        "duration" : 128519
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "625b4e7cd146c3ddb9368a742867719b"
+  }, {
+    "name" : "009: Analytics Tab",
+    "children" : [ {
+      "name" : "Returns success message after resubmitting Local Analytics",
+      "uid" : "603fbe22e46270a8",
+      "parentUid" : "3e5dc0b38c3dc11cba61d003731eb2ab",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716603685,
+        "stop" : 1623716732270,
+        "duration" : 128585
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3e5dc0b38c3dc11cba61d003731eb2ab"
+  }, {
+    "name" : "010: CDN Tab",
+    "children" : [ {
+      "name" : "Returns success message after resubmitting https://cdn/",
+      "uid" : "bac6b796522fe4d7",
+      "parentUid" : "2ac30bf04e29ce0574c40396d241fd04",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716732271,
+        "stop" : 1623716860813,
+        "duration" : 128542
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2ac30bf04e29ce0574c40396d241fd04"
+  }, {
+    "name" : "011: Storage Tab",
+    "children" : [ {
+      "name" : "Returns success after resubmitting MinIO storage edit",
+      "uid" : "72aa349d5f82e26b",
+      "parentUid" : "32726f1cdfbae12849d4af3bafae71c0",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716860815,
+        "stop" : 1623716989427,
+        "duration" : 128612
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "32726f1cdfbae12849d4af3bafae71c0"
+  }, {
+    "name" : "012: External Catalogs Tab",
+    "children" : [ {
+      "name" : "Returns success message after resubmitting MARC Export catalog",
+      "uid" : "fb8d56a9b3fcac84",
+      "parentUid" : "9a78747400eb74b2454495cd28aea992",
+      "status" : "broken",
+      "time" : {
+        "start" : 1623716989429,
+        "stop" : 1623717118036,
+        "duration" : 128607
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9a78747400eb74b2454495cd28aea992"
+  } ],
+  "name" : "suites"
+}
