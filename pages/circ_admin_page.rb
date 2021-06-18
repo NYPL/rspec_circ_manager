@@ -34,7 +34,7 @@ class CircAdminPage
     #  PAGE ACTIONS
     def goto_url
         @browser.goto @admin_portal_url
-        # sleep(5) #change this later; needs adaptive wait
+        sleep(30) #change this later; needs adaptive wait
     end
 
     def validate_page
