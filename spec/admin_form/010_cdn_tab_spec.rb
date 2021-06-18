@@ -44,7 +44,7 @@ RSpec.describe "010: CDN Tab" do
         @admin_page.goto_url
         
         @admin_page.cdn_tab.wait_until(&:present?).click
-        sleep(10)
+        sleep(30)
         
         @cdn_form.resubmit_cdn_edit
         expect(@admin_page.success_message.present?).to eql true
