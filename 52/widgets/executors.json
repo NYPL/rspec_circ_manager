@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://NYPL.github.io/rspec_circ_manager",
+  "buildOrder" : 52,
+  "buildName" : "GitHub Actions Run #953411146",
+  "buildUrl" : "https://github.com/NYPL/rspec_circ_manager/actions/runs/953411146",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/52/"
+} ]
