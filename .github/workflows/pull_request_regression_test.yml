@@ -31,6 +31,6 @@ jobs:
           bundle install
       - name: Run RSpec Test
         run: |
-          app_type=headless rspec
+          app_type=headless rspec ./spec/admin_form/001_libraries_tab_spec.rb
       - name: Check for Files
         run: ls
