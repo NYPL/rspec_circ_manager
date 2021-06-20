@@ -159,10 +159,7 @@ class CircAdminLibrariesForm < CircAdminPage
 
     # PAGE ACTIONS
     def fill_form (name, url, patron_support_email, vendor_email)
-        if @library_create_button.stale?
-            puts "@library_create_button is stale!"
-        end
-
+        @library_create_button.present?
         @library_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
         sleep(30)
