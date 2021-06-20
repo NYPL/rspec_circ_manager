@@ -159,6 +159,7 @@ class CircAdminLibrariesForm < CircAdminPage
 
     # PAGE ACTIONS
     def fill_form (name, url, patron_support_email, vendor_email)
+        sleep(30)
         @library_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
         sleep(30)
