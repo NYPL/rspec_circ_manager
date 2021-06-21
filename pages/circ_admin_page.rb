@@ -159,16 +159,16 @@ class CircAdminLibrariesForm < CircAdminPage
 
     # PAGE ACTIONS
     def fill_form (name, url, patron_support_email, vendor_email)
-        puts @library_create_button.present?
-        @library_create_button.wait_until(&:present?).click
+        # puts "is library create button present? " + @library_create_button.visible?
+        @library_create_button.wait_until(&:visible?).click
         # wait_for_loading_message(@library_loading_message)
         sleep(30)
-        @library_form_name_field.wait_until(&:present?).set(name)
-        @library_form_short_name_field.wait_until(&:present?).set(name)
-        @library_form_url_field.wait_until(&:present?).set(url)
-        @library_form_support_email_field.wait_until(&:present?).set(patron_support_email)
-        @library_form_vendor_email_field.wait_until(&:present?).set(vendor_email)
-        @library_form_submit_button.wait_until(&:present?).click
+        @library_form_name_field.wait_until(&:visible?).set(name)
+        @library_form_short_name_field.wait_until(&:visible?).set(name)
+        @library_form_url_field.wait_until(&:visible?).set(url)
+        @library_form_support_email_field.wait_until(&:visible?).set(patron_support_email)
+        @library_form_vendor_email_field.wait_until(&:visible?).set(vendor_email)
+        @library_form_submit_button.wait_until(&:visible?).click
         # wait_for_loading_message(@library_loading_message)
         sleep(30)
     end
