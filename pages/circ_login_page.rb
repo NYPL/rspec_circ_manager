@@ -26,15 +26,15 @@ class CircLoginPage
         @password_text_field.wait_until(&:present?).set(password)
         @submit_button.wait_until(&:present?).click
         @submit_button.wait_while(&:present?)
-        sleep(30)
+        sleep(10)
         @browser.goto @admin_portal_url
-        sleep(30)
+        sleep(10)
         @email_text_field.wait_until(&:present?).set(email)
         @password_text_field.wait_until(&:present?).set(password)
         @submit_button.wait_until(&:present?).click
         @submit_button.wait_while(&:present?)
-        sleep(30)
+        sleep(10)
         @browser.goto @admin_portal_url
-        sleep(30)
+        sleep(10)
     end
 end

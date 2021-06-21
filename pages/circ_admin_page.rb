@@ -34,7 +34,7 @@ class CircAdminPage
     #  PAGE ACTIONS
     def goto_url
         @browser.goto @admin_portal_url
-        sleep(30) #change this later; needs adaptive wait
+        sleep(10) #change this later; needs adaptive wait
     end
 
     def validate_page
@@ -159,18 +159,18 @@ class CircAdminLibrariesForm < CircAdminPage
 
     # PAGE ACTIONS
     def fill_form (name, url, patron_support_email, vendor_email)
-        # puts "is library create button present? " + @library_create_button.visible?
-        @library_create_button.wait_until(&:visible?).click
+        # puts "is library create button present? " + @library_create_button.present?
+        @library_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
-        sleep(30)
-        @library_form_name_field.wait_until(&:visible?).set(name)
-        @library_form_short_name_field.wait_until(&:visible?).set(name)
-        @library_form_url_field.wait_until(&:visible?).set(url)
-        @library_form_support_email_field.wait_until(&:visible?).set(patron_support_email)
-        @library_form_vendor_email_field.wait_until(&:visible?).set(vendor_email)
-        @library_form_submit_button.wait_until(&:visible?).click
+        sleep(10)
+        @library_form_name_field.wait_until(&:present?).set(name)
+        @library_form_short_name_field.wait_until(&:present?).set(name)
+        @library_form_url_field.wait_until(&:present?).set(url)
+        @library_form_support_email_field.wait_until(&:present?).set(patron_support_email)
+        @library_form_vendor_email_field.wait_until(&:present?).set(vendor_email)
+        @library_form_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
-        sleep(30)
+        sleep(10)
     end
 end
 
@@ -192,11 +192,11 @@ class CircAdminAdminsForm < CircAdminPage
     def fill_form (email)
         @admin_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@admin_loading_message)
-        sleep(30)
+        sleep(10)
         @admin_email_text_field.wait_until(&:present?).set(email)
         @admin_form_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@admin_loading_message)
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -230,7 +230,7 @@ class CircAdminCollectionsForm < CircAdminPage
     def fill_form_with_overdrive_test_values (name)
         @create_collection_button.wait_until(&:present?).click
         # @collections_loading_message.wait_while(&:present?)
-        sleep(30)
+        sleep(10)
         if @collections_name_text_field_1.present?
             @collections_name_text_field_1.wait_until(&:present?).set(name)
         elsif @collections_name_text_field_2.present?
@@ -243,7 +243,7 @@ class CircAdminCollectionsForm < CircAdminPage
         @collections_client_secret_text_field.wait_until(&:present?).set("test")
         @collections_submit_button.wait_until(&:present?).click
         # @collections_loading_message.wait_while(&:present?)
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -275,7 +275,7 @@ class CircAdminPatronAuthForm < CircAdminPage
     def fill_form_with_millenium_test_values (name)
         @create_patron_auth_button.wait_until(&:present?).click
         # wait_for_loading_message(@patron_auth_loading_message)
-        sleep(30)
+        sleep(10)
         @patron_auth_name_text_field.wait_until(&:present?).set(name)
         @patron_auth_protocol_select_list.wait_until(&:present?).select "Millenium"
         @patron_auth_url_text_field.wait_until(&:present?).set("https://millenium.com/")
@@ -284,7 +284,7 @@ class CircAdminPatronAuthForm < CircAdminPage
         @patron_auth_keyboard_id_select_list.wait_until(&:present?).select "System default"
         @patron_auth_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@patron_auth_loading_message)
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -372,12 +372,12 @@ class CircAdminLoggingForm < CircAdminPage
     def fill_form_as_sysLog(name)
         @create_logging_button.wait_until(&:present?).click
         # wait_for_loading_message(@logging_loading_message)
-        sleep(30)
+        sleep(10)
         @logging_protocol_select_list.select "sysLog"
         @logging_name_text_field.wait_until(&:present?).set(name)
         @logging_submit_button.wait_until(&:present?).click
         # wait_for_loading_message(@logging_loading_message)
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -406,11 +406,11 @@ class CircAdminMetadataForm < CircAdminPage
     def fill_form_as_lsmm(name)
         @create_metadata_button.wait_until(&:present?).click
         # wait_for_loading_message(@metadata_loading_message)
-        sleep(30)
+        sleep(10)
         @metadata_protocol_select_list.select "Library Simplified Metadata Wrangler"
         @metadata_name_text_field.wait_until(&:present?).set(name)
         @metadata_submit_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -435,9 +435,9 @@ class CircAdminAnalyticsForm < CircAdminPage
         # This assumes that "Local Analytics" is already set up
         @edit_local_analytics_button.wait_until(&:present?).click
         # wait_for_loading_message(@analytics_loading_message)
-        sleep(30)
+        sleep(10)
         @analytics_submit_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -468,15 +468,15 @@ class CircAdminCDNForm < CircAdminPage
         # This assumes that "https://cdn/" is already set up
         # sleep(300)
         @edit_cdn_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
         @cdn_existing_submit_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
     end
 
     def fill_form_as_cdn(name="test cdn 1", protocol="CDN", url="https://cdn/", mirrored_domain="original.com")
         @create_cdn_service_button.wait_until(&:present?).click
         puts "button clicked!"
-        sleep(30)
+        sleep(10)
         puts "made it to page"
         @cdn_protocol_select_list.select protocol
         @cdn_name_field.wait_until(&:present?).set(name)
@@ -484,7 +484,7 @@ class CircAdminCDNForm < CircAdminPage
         @cdn_domain_field.wait_until(&:present?).set(mirrored_domain)
         @cdn_new_submit_button.wait_until(&:present?).click
         puts "submit button clicked!"
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -503,9 +503,9 @@ class CircAdminStorageForm < CircAdminPage
     def resubmit_minIO_edit
         # This assumes that "minIO" is already set up
         @edit_minIO_storage_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
         @storage_submit_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
@@ -524,9 +524,9 @@ class CircAdminExtCatalogForm < CircAdminPage
     def resubmit_MARC_catalog_edit
         # This assumes that "minIO" is already set up
         @edit_MARC_export_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
         @external_catalog_submit_button.wait_until(&:present?).click
-        sleep(30)
+        sleep(10)
     end
 
     # GETTERS
