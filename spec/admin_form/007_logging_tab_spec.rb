@@ -11,7 +11,6 @@ RSpec.describe "007: Logging Tab" do
     end
 
     before(:each) do
-        # Browser launch to be handled by launch_browser_instance in spec_helper in future
         if ENV['app_type'] == 'headless'
             opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless'])
             client = Selenium::WebDriver::Remote::Http::Default.new

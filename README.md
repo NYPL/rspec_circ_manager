@@ -23,7 +23,7 @@ Additionally, page objects for administrative forms are present in _circ_admin_p
 ## Configuration
 ### Environment variables
 
-Test scripts are run against the teardown QA server at https://qa-circulation.librarysimplified.org/
+Test scripts are run against the teardown server at https://disposable-circulation.librarysimplified.org/
 
 The `CIRC_USERNAME` environment variable contains the username to use for authentication, and the `CIRC_PASSWORD` environment variable contains the password.
 
@@ -52,8 +52,12 @@ rspec spec/admin_form/007_logging_tab_spec.rb
 After running a single spec successfully, it will look something like this:
 ![image info](success_test_circ.png)
 
+## Current State
+At this time, this automation can only be run locally to run regression. When running this test suite on GitHub Actions, it appears that Watir elements cannot be found due to differences between local Linux runs and container Linux runs (GitHub Actions). This is slated to be fixed at an undetermined, future date.
+
 ## Future Work
 To increase the quality of test framework, the following items should be worked on in the future:
+* Fix automation to allow successful run of test on GitHub Actions. See section _Current State_ for more information.
 * Refactor _launch_browser_instance_ method in _spec_helper.rb_ file to correctly pass browser instance.
 * Replace explicit browser instance creation in each spec with passed-in _launch_browser_instance_ method.
 * Replace sleep() in _goto_url_ method in _CircAdminPage_ page object with wait.

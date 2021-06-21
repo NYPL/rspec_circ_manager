@@ -17,6 +17,7 @@
 require "dotenv/load"
 require "rspec/retry"
 require "allure-rspec"
+require "watir"
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -117,21 +118,57 @@ RSpec.configure do |config|
   # associated with this test framework.
   config.failure_exit_code = 0
 
+  # config.before(:each) do |example|
+  #   @client = Selenium::WebDriver::Remote::Http::Default.new
+  #     @client.open_timeout = 180
+  #     @client.read_timeout = 180
+  #     @profile = Selenium::WebDriver::Chrome::Profile.new
+  #     @profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+  #     @profile['browser.download.folderList'] = 2
+  #     @profile['browser.helperApps.neverAsk.saveToDisk'] = "application/octet-stream"
+  #     puts @client.to_s
+  #     puts @profile.to_s
+
+  #   if ENV['app_type'] == 'headless'
+  #     $opts = Selenium::WebDriver::Chrome::Options::new
+  #     # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+  #     # $opts.binary = chrome_bin_path if chrome_bin_path
+  #     $opts.add_argument('--headless')
+  #     $opts.add_argument('--window-size=1920x1080')
+  #     @capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(accept_insecure_certs: true)
+  #     puts $opts.to_s
+  #     @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client, :desired_capabilities => @capabilities, :options => $opts
+  #     puts "Window Size: #{@browser.driver.manage.window.size}"
+  #     @browser.ready_state.eql? "complete"
+  #   else
+  #     $opts = Selenium::WebDriver::Chrome::Options::new
+  #     # chrome_bin_path = ENV.fetch('GOOGLE_CHROME_SHIM',nil)
+  #     # $opts.binary = chrome_bin_path if chrome_bin_path
+  #     @browser = Watir::Browser.new :chrome, :profile => @profile, :http_client => @client
+  #     @browser.instance_variable_set :@speed, :slow
+  #     @browser.window.maximize()
+  #     @browser.ready_state.eql? "complete"
+  #   end
+    
+    
+  # end
+
   # After running an example, take an Allure screenshot on failure.
-  config.after(:each) do |example|
-    # puts @browser.to_s
-    # screenshot_file = @browser.screenshot.save "./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png"
+  # config.after(:each) do |example|
+  #   puts @browser.to_s
+  #   screenshot_file = File.expand_path("./screenshots/screenshot_error_#{Time.now.strftime('%Y%m%d-%H%M%S')}.png")
+  #   puts screenshot_file.to_s
+  #   @browser.screenshot.save(screenshot_file)
 
-
-    # if example.exception
-    #   Allure.step(name: 'Screenshot')
-    #   Allure.add_attachment(
-    #     name: 'After hook attach',
-    #     source: File.open(screenshot_file),
-    #     type: Allure::ContentType::PNG
-    #   )
-    # end
-  end
+  #   if example.exception
+  #     Allure.step(name: 'Screenshot')
+  #     Allure.add_attachment(
+  #       name: 'After hook attach',
+  #       source: File.open(screenshot_file),
+  #       type: Allure::ContentType::PNG
+  #     )
+  #   end
+  # end
 end
 
 def random_email(email_string_length=5, domain="@gmail.com")

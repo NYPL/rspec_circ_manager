@@ -1,10 +1,10 @@
-name: 'CIRC Manager Regression Test'
+name: 'CIRC Manager Regression Test (Main)'
 
 on:
   push:
     branches: [ main ]
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 0 * * 1'
 
 jobs:
   ubuntu-job:

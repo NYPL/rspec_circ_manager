@@ -34,7 +34,7 @@ class CircAdminPage
     #  PAGE ACTIONS
     def goto_url
         @browser.goto @admin_portal_url
-        sleep(5) #change this later; needs adaptive wait
+        sleep(10) #change this later; needs adaptive wait
     end
 
     def validate_page
@@ -159,6 +159,7 @@ class CircAdminLibrariesForm < CircAdminPage
 
     # PAGE ACTIONS
     def fill_form (name, url, patron_support_email, vendor_email)
+        # puts "is library create button present? " + @library_create_button.present?
         @library_create_button.wait_until(&:present?).click
         # wait_for_loading_message(@library_loading_message)
         sleep(10)

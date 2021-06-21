@@ -13,7 +13,7 @@ RSpec.describe "009: Analytics Tab" do
     before(:each) do
         # Browser launch to be handled by launch_browser_instance in spec_helper in future
         if ENV['app_type'] == 'headless'
-            opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless'])
+            opts = Selenium::WebDriver::Chrome::Options::new(args: ['--headless', '--window-size=1920x1080'])
             client = Selenium::WebDriver::Remote::Http::Default.new
             client.open_timeout = 180
             client.read_timeout = 180
@@ -24,7 +24,7 @@ RSpec.describe "009: Analytics Tab" do
             client.read_timeout = 180
             @browser = Watir::Browser.new :chrome, :http_client => client
         end
-
+        
         @login_page = CircLoginPage.new(@browser)
         @admin_page = CircAdminPage.new(@browser)
         
