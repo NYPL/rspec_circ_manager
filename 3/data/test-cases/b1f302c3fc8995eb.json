@@ -1,0 +1,281 @@
+{
+  "uid" : "b1f302c3fc8995eb",
+  "name" : "Returns success message with valid form fill",
+  "fullName" : "001: Libraries Tab Returns success message with valid form fill",
+  "historyId" : "f11a6d1c23b4b62f691845860c8471e5",
+  "time" : {
+    "start" : 1625443549918,
+    "stop" : 1625443703154,
+    "duration" : 153236
+  },
+  "description" : "Location - spec/admin_form/001_libraries_tab_spec.rb:40",
+  "descriptionHtml" : "Location - spec/admin_form/001_libraries_tab_spec.rb:40",
+  "status" : "broken",
+  "statusMessage" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+  "statusTrace" : "/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/watir-6.19.1/lib/watir/wait.rb:46:in `until'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/watir-6.19.1/lib/watir/wait.rb:125:in `wait_until'\n/home/runner/work/rspec_circ_manager/rspec_circ_manager/pages/circ_admin_page.rb:163:in `fill_form'\n/home/runner/work/rspec_circ_manager/rspec_circ_manager/spec/admin_form/001_libraries_tab_spec.rb:45:in `block (2 levels) in <top (required)>'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:262:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:262:in `block in run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `block in with_around_and_singleton_context_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `block in with_around_example_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `block in run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:350:in `call'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:390:in `execute_with'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:350:in `call'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `with_around_example_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `with_around_and_singleton_context_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:259:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:644:in `block in run_examples'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `map'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `run_examples'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:606:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `map'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2067:in `with_suite_hooks'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:116:in `block in run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/reporter.rb:74:in `report'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:115:in `run_specs'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:89:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:71:in `run'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:45:in `invoke'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/exe/rspec:4:in `<top (required)>'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/bin/rspec:23:in `load'\n/opt/hostedtoolcache/Ruby/3.0.0/x64/bin/rspec:23:in `<main>'",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "rspec"
+  }, {
+    "name" : "package",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "testClass",
+    "value" : "001_libraries_tab_spec"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "epic",
+    "value" : "spec/admin_form"
+  }, {
+    "name" : "feature",
+    "value" : "001: Libraries Tab"
+  }, {
+    "name" : "suite",
+    "value" : "001: Libraries Tab"
+  }, {
+    "name" : "thread",
+    "value" : "48520"
+  }, {
+    "name" : "host",
+    "value" : "fv-az93-645"
+  }, {
+    "name" : "language",
+    "value" : "ruby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 23,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 23
+      },
+      "items" : [ {
+        "uid" : "b16352a52595c968",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/2//#testresult/b16352a52595c968",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1624838737473,
+          "stop" : 1624838886589,
+          "duration" : 149116
+        }
+      }, {
+        "uid" : "d094f44fd6316ee4",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/1//#testresult/d094f44fd6316ee4",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1624312576631,
+          "stop" : 1624312721385,
+          "duration" : 144754
+        }
+      }, {
+        "uid" : "3495042f8d08557f",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/53//#testresult/3495042f8d08557f",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1624234066909,
+          "stop" : 1624234200182,
+          "duration" : 133273
+        }
+      }, {
+        "uid" : "623f210732b3538e",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/52//#testresult/623f210732b3538e",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1624147728689,
+          "stop" : 1624147867693,
+          "duration" : 139004
+        }
+      }, {
+        "uid" : "216e18d6ffd631d5",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/51//#testresult/216e18d6ffd631d5",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1624061263488,
+          "stop" : 1624061393418,
+          "duration" : 129930
+        }
+      }, {
+        "uid" : "a4b424867b64c733",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/50//#testresult/a4b424867b64c733",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623974830484,
+          "stop" : 1623974966514,
+          "duration" : 136030
+        }
+      }, {
+        "uid" : "ce0c18eccd28d1cf",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/49//#testresult/ce0c18eccd28d1cf",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623888457016,
+          "stop" : 1623888588438,
+          "duration" : 131422
+        }
+      }, {
+        "uid" : "53b4f941bf5d57c4",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/48//#testresult/53b4f941bf5d57c4",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623802049793,
+          "stop" : 1623802179581,
+          "duration" : 129788
+        }
+      }, {
+        "uid" : "aa4804f74b652a55",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/47//#testresult/aa4804f74b652a55",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623715666116,
+          "stop" : 1623715796360,
+          "duration" : 130244
+        }
+      }, {
+        "uid" : "95439705d5527c22",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/46//#testresult/95439705d5527c22",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623629266524,
+          "stop" : 1623629396893,
+          "duration" : 130369
+        }
+      }, {
+        "uid" : "9526898d426035de",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/45//#testresult/9526898d426035de",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623542884739,
+          "stop" : 1623543014392,
+          "duration" : 129653
+        }
+      }, {
+        "uid" : "7d17f704ba2e4fce",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/44//#testresult/7d17f704ba2e4fce",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623456429348,
+          "stop" : 1623456559602,
+          "duration" : 130254
+        }
+      }, {
+        "uid" : "9907a5f322676401",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/43//#testresult/9907a5f322676401",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623370040402,
+          "stop" : 1623370171009,
+          "duration" : 130607
+        }
+      }, {
+        "uid" : "ad87bc831ea734c4",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/42//#testresult/ad87bc831ea734c4",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623283653619,
+          "stop" : 1623283783113,
+          "duration" : 129494
+        }
+      }, {
+        "uid" : "358a2ab2f54be925",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/41//#testresult/358a2ab2f54be925",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623197287362,
+          "stop" : 1623197417445,
+          "duration" : 130083
+        }
+      }, {
+        "uid" : "1f3e5f8621ef515e",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/40//#testresult/1f3e5f8621ef515e",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623111558688,
+          "stop" : 1623111689078,
+          "duration" : 130390
+        }
+      }, {
+        "uid" : "908c4b64c6362027",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/39//#testresult/908c4b64c6362027",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1623024952130,
+          "stop" : 1623025082425,
+          "duration" : 130295
+        }
+      }, {
+        "uid" : "31169c13610d93df",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/38//#testresult/31169c13610d93df",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1622938605067,
+          "stop" : 1622938740693,
+          "duration" : 135626
+        }
+      }, {
+        "uid" : "33398c7866289fa3",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/37//#testresult/33398c7866289fa3",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1622852484671,
+          "stop" : 1622852616062,
+          "duration" : 131391
+        }
+      }, {
+        "uid" : "8a6fe3b59f257bd0",
+        "reportUrl" : "https://NYPL.github.io/rspec_circ_manager/36//#testresult/8a6fe3b59f257bd0",
+        "status" : "broken",
+        "statusDetails" : "timed out after 30 seconds, waiting for true condition on #<Watir::HTMLElement: located: false; {:class=>[\"btn\", \"btn-default\", \"create-item\"]}>",
+        "time" : {
+          "start" : 1622766497019,
+          "stop" : 1622766639710,
+          "duration" : 142691
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b1f302c3fc8995eb.json",
+  "parameterValues" : [ ]
+}
