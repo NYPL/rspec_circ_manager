@@ -1,3 +1,8 @@
+# Deprecated
+Further work on the circulation manager has been paused as of April 2025.
+
+This repository is now archived and will no longer receive updates.
+
 # rspec_circ_manager
 ## Description
 This is the official automation for NYPL Circ Manager.
